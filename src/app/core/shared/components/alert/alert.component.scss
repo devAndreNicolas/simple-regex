@@ -1,0 +1,24 @@
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+
+  .icon {
+    margin-right: 0.75rem;
+  }
+
+  &.success {
+    background-color: var(--color-success-background);
+    color: var(--color-success-text);
+  }
+  &.error {
+    background-color: var(--color-error-background);
+    color: var(--color-error-text);
+  }
+  &.warning {
+    background-color: var(--color-warning-background);
+    color: var(--color-warning-text);
+  }
+}
