@@ -10,6 +10,7 @@ import { OnboardingModalComponent } from './core/shared/components/onboarding-mo
 import { AlertComponent } from './core/shared/components/alert/alert.component';
 import { RegexDisplayComponent } from './core/shared/components/regex-display/regex-display.component';
 import { AdBannerComponent } from "./core/shared/components/ad-banner/ad-banner.component";
+import { RegexGeneratorService } from './core/services/regex-generator.service';
 
 @Component({
   selector: 'app-root',
@@ -35,10 +36,20 @@ export class AppComponent implements OnInit {
   feedbackType: 'success' | 'error' | 'warning' = 'warning';
   showOnboarding: boolean = false;
   regexParts: any[] = [];
+
+  // Variáveis para as opções de select
+  urlCategories: string[] = ['optional', 'mandatory'];
+  postalCodeCategories: string[] = ['brazil', 'usa', 'canada', 'uk', 'germany'];
+
+    // Variáveis para controlar os valores dos selects
+  selectedUrlCategory!: string | null;
+  selectedPostalCodeCategory!: string | null;
+
   
   constructor(
     private validatorService: RegexValidatorService,
-    private explainerService: RegexExplainerService
+    private explainerService: RegexExplainerService,
+    private regexGeneratorService: RegexGeneratorService
   ) {}
 
   ngOnInit(): void {
@@ -48,9 +59,22 @@ export class AppComponent implements OnInit {
     }
   }
 
-  // Métodos de geração (agora com a regex de e-mail correta)
-  generateEmailRegex(): void {
-    this.generatedRegex = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{3,}$';
+  generateRegex(type: string, category?: string): void {
+    this.testText = '';
+    this.setFeedback('', 'warning');
+
+    // Reseta o select de URL se o tipo gerado não for uma URL
+    if (type !== 'url') {
+      this.selectedUrlCategory = null;
+    }
+
+    // Reseta o select de Código Postal se o tipo gerado não for um CEP
+    if (type !== 'cep') {
+      this.selectedPostalCodeCategory = null;
+    }
+
+    const regex = this.regexGeneratorService.getRegex(type, category);
+    this.generatedRegex = regex;
     this.explainRegex(this.generatedRegex);
   }
 

@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
-import { AlertCircle, CheckCircle, Copy, Info, LucideAngularModule, Mail, XCircle } from 'lucide-angular';
+import { AlertCircle, CalendarDays, CheckCircle, Copy, CreditCard, Globe, Info, LucideAngularModule, Mail, MapPin, Phone, XCircle } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,7 +17,12 @@ export const appConfig: ApplicationConfig = {
         CheckCircle,
         XCircle,  
         AlertCircle,
-        Info
+        Info,
+        Phone,
+        CreditCard,
+        MapPin,
+        CalendarDays,
+        Globe
       })
     )
   ]

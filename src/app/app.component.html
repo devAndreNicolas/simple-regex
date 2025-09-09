@@ -6,19 +6,59 @@
     <p>Ferramenta simples para iniciantes em Expressões Regulares.</p>
   </header>
 
-  <app-ad-banner imageUrl="https://via.placeholder.com/1200x200.png?text=Anuncio+Topo" linkUrl="https://google.com" altText="Anúncio principal"></app-ad-banner>
+  <app-ad-banner imageUrl="https://placehold.co/600x400/EEE/31343C" linkUrl="https://google.com" altText="Anúncio principal"></app-ad-banner>
 
   <main class="main-grid">
-    <section class="section">
-      <h2>1. Gerador Guiado</h2>
-      <p>Escolha um padrão para gerar a sua regex.</p>
-      <div class="options-container">
-        <button class="btn" (click)="generateEmailRegex()">
-          <lucide-icon name="mail" class="icon"></lucide-icon>
-          E-mail
-        </button>
-      </div>
-    </section>
+      <section class="section">
+        <h2>1. Gerador Guiado</h2>
+        <p>Escolha um padrão para gerar a sua regex.</p>
+        <div class="options-container">
+          <button class="btn" (click)="generateRegex('email', 'default')">
+            <lucide-icon name="mail" class="icon"></lucide-icon>
+            E-mail
+          </button>
+          <button class="btn" (click)="generateRegex('phone', 'default')">
+            <lucide-icon name="phone" class="icon"></lucide-icon>
+            Telefone
+          </button>
+          <button class="btn" (click)="generateRegex('cpf', 'default')">
+            <lucide-icon name="credit-card" class="icon"></lucide-icon>
+            CPF
+          </button>
+          <button class="btn" (click)="generateRegex('date', 'default')">
+            <lucide-icon name="calendar-days" class="icon"></lucide-icon>
+            Data
+          </button>
+          
+          <div class="select-group">
+            <label for="url-select" class="text-gray-600 font-semibold mb-1 block">URL:</label>
+            <select id="url-select" 
+              [(ngModel)]="selectedUrlCategory"
+              (change)="generateRegex('url', selectedUrlCategory!)"
+              class="w-full bg-white border border-gray-300 rounded-lg shadow-sm py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+            >
+              <option [value]="null" disabled selected>Escolha uma opção</option>
+              <option *ngFor="let category of urlCategories" [value]="category">
+                {{ category === 'optional' ? 'Opcional' : 'Obrigatória' }}
+              </option>
+            </select>
+          </div>
+
+          <div class="select-group">
+            <label for="postal-code-select" class="text-gray-600 font-semibold mb-1 block">Código Postal:</label>
+            <select id="postal-code-select" 
+              [(ngModel)]="selectedPostalCodeCategory"
+              (change)="generateRegex('cep', selectedPostalCodeCategory!)"
+              class="w-full bg-white border border-gray-300 rounded-lg shadow-sm py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+            >
+              <option [value]="null" disabled selected>Escolha um país</option>
+              <option *ngFor="let category of postalCodeCategories" [value]="category">
+                {{ category | titlecase }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </section>
 
     <section class="section">
       <h2>2. Regex Gerada</h2>
@@ -48,5 +88,5 @@
     </section>
   </main>
   
-  <app-ad-banner imageUrl="https://via.placeholder.com/1200x200.png?text=Anuncio+Final" linkUrl="https://google.com" altText="Anúncio rodapé"></app-ad-banner>
+  <app-ad-banner imageUrl="https://placehold.co/600x400/EEE/31343C" linkUrl="https://google.com" altText="Anúncio rodapé"></app-ad-banner>
 </div>

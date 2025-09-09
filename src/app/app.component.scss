@@ -49,6 +49,78 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-border);
+    background-color: var(--color-background-card);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: var(--box-shadow);
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+    }
+
+    .icon {
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+    &:hover .icon {
+      color: white;
+    }
+  }
+    lucide-icon {
+      width: 18px;
+      height: 24px;
+    }
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 250px;
+  flex-grow: 1;
+
+  label {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  select {
+    width: 100%;
+    background-color: var(--color-background-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 0.75rem 1rem;
+    appearance: none; /* remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path fill="%23718096" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    transition: all 0.2s ease-in-out;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(85, 66, 246, 0.5);
+    }
+  }
 }
 
 .text-area {
