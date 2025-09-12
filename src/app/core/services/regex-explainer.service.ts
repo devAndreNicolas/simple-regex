@@ -6,29 +6,31 @@ import { Injectable } from '@angular/core';
 export class RegexExplainerService {
 
   private explanations: { [key: string]: string } = {
-    // Delimitadores de Posição
-    '^': 'O padrão precisa começar aqui.',
-    '$': 'O padrão precisa terminar aqui.',
-    
-    // Conjuntos de Caracteres Pré-definidos
-    '\\d': 'Qualquer **número** (de 0 a 9).',
-    '\\w': 'Qualquer **letra, número ou _**.',
-    '.': 'Qualquer **caractere** (exceto uma nova linha).',
-    
-    // Quantificadores
-    '+': 'Repete **1 ou mais vezes**.',
-    '*': 'Repete **0 ou mais vezes**.',
-    '?': 'É **opcional**.',
-    
-    // Agrupamento e Alternância
-    '()': 'Grupo de caracteres.',
-    '|': 'Escolha entre estas opções.',
-
-    // Caracteres Literais (escritura)
-    '@': 'O símbolo **@**.',
-    '\\.': 'Um **ponto** literal.',
-    '-': 'Um **traço** literal.',
-    '_': 'Um **sublinhado** literal.'
+    '^': 'Início da linha.',
+    '$': 'Fim da linha.',
+    '\\d': 'Qualquer número (0-9).',
+    '\\w': 'Qualquer letra, número ou sublinhado (_).',
+    '\\s': 'Um espaço em branco (espaço, tab, quebra de linha).',
+    '\\.': 'Um ponto literal.',
+    '\\+': 'O sinal de mais literal.',
+    '\\-': 'Um traço literal.',
+    '\\@': 'O símbolo de arroba (@).',
+    '.': 'Qualquer caractere (exceto nova linha).',
+    '*': '0 ou mais vezes.',
+    '+': '1 ou mais vezes.',
+    '?': 'Opcional (0 ou 1 vez).',
+    '|': 'OU (alternativa entre opções).',
+    '()': 'Grupo de captura.',
+    '(?:': 'Grupo sem captura (só agrupamento lógico).',
+    '(?=': 'Lookahead positivo (verifica se algo vem depois).',
+    '(?!': 'Lookahead negativo (verifica se algo **não** vem depois).',
+    '(?P<': 'Grupo nomeado (usado em algumas engines).',
+    '{n}': 'Repete exatamente **n** vezes.',
+    '{n,}': 'Repete **n ou mais** vezes.',
+    '{n,m}': 'Repete entre **n e m** vezes.',
+    '_': 'Um sublinhado literal.',
+    '@': 'O símbolo arroba (@).',
+    '-': 'Um traço literal.'
   };
 
   /**
@@ -36,37 +38,55 @@ export class RegexExplainerService {
    */
   explain(regex: string): { pattern: string, explanation: string }[] {
     const tokens: { pattern: string; explanation: string; }[] = [];
-    
-    // Regex aprimorada para capturar blocos completos
-    const regexPattern = /(\\[dDwWsS])|(\^+|\$+)|\.|\?|\*|\+|\(|\)|\[[^\]]*\]|\||\{|\}|([a-zA-Z0-9.@%+-]+)/g;
+
+    const regexPattern = /(\(\?:|\(\?=|\(\?!|\(\?<=|\(\?<!|\(\?P<[^>]+>|\\[dDwWsS])|(\^|\$)|\{[0-9,]*\}|\.|\?|\*|\+|\(|\)|\[[^\]]*\]|\\.|[a-zA-Z0-9@%+_'-]+|[\|]/g;
+
     let match;
-    
+
     while ((match = regexPattern.exec(regex)) !== null) {
       const pattern = match[0];
       let explanation = this.explanations[pattern] || '';
 
-      // Se a explicação não for encontrada no dicionário
-      if (!explanation) {
-        if (pattern.startsWith('[') && pattern.endsWith(']')) {
-          // Explica conjuntos de caracteres de forma clara
-          const content = pattern.substring(1, pattern.length - 1);
-          let parts = [];
-          if (content.includes('a-zA-Z')) parts.push('letras (a-z, A-Z)');
-          if (content.includes('0-9')) parts.push('números (0-9)');
-          if (content.includes('._%+-')) parts.push('símbolos (. _ % + -)');
-          if (content.includes('.')) parts.push('o ponto');
-          if (content.includes('-')) parts.push('o traço');
+      // Conjuntos de caracteres: [a-z], [^a-z], etc.
+      if (!explanation && pattern.startsWith('[') && pattern.endsWith(']')) {
+        const isNegated = pattern.startsWith('[^');
+        const content = pattern.slice(isNegated ? 2 : 1, -1);
+        const parts: string[] = [];
 
-          explanation = `Corresponde a qualquer um destes: ${parts.join(', ')}.`;
-        } else if (pattern.startsWith('{') && pattern.endsWith('}')) {
-          const numbers = pattern.substring(1, pattern.length - 1);
-          explanation = `Repete **${numbers} vezes**`;
-        } else if (pattern.includes('|')) {
-          explanation = 'OU lógico: pode ser um desses.';
+        if (content.includes('a-z')) parts.push('letras minúsculas (a–z)');
+        if (content.includes('A-Z')) parts.push('letras maiúsculas (A–Z)');
+        if (content.includes('0-9')) parts.push('números (0–9)');
+        if (content.includes('_')) parts.push('sublinhado');
+        if (content.includes('%')) parts.push('porcentagem');
+        if (content.includes('+')) parts.push('mais');
+        if (content.includes('-')) parts.push('traço');
+        if (content.includes('.')) parts.push('ponto');
+
+        explanation = isNegated
+          ? `Qualquer caractere **exceto**: ${parts.join(', ')}.`
+          : `Qualquer caractere entre: ${parts.join(', ')}.`;
+      }
+
+      // Quantificadores do tipo {n}, {n,}, {n,m}
+      else if (!explanation && /^\{\d+(,\d*)?\}$/.test(pattern)) {
+        const content = pattern.slice(1, -1);
+        if (content.includes(',')) {
+          const [min, max] = content.split(',');
+          if (!max) explanation = `Repete **${min} ou mais vezes**.`;
+          else explanation = `Repete **entre ${min} e ${max} vezes**.`;
         } else {
-          // Explicação padrão para caracteres comuns
-          explanation = `Este é o caractere **${pattern}**`;
+          explanation = `Repete **exatamente ${content} vezes**.`;
         }
+      }
+
+      // Escape genérico (ex: \., \-, \@)
+      else if (!explanation && pattern.startsWith('\\')) {
+        explanation = `Caractere **especial escapado**: ${pattern.slice(1)}`;
+      }
+
+      // Fallback genérico
+      else if (!explanation) {
+        explanation = `Este é o caractere **${pattern}**.`;
       }
 
       tokens.push({ pattern, explanation });

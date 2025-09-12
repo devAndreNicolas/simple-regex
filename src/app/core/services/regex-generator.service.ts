@@ -46,7 +46,7 @@ export class RegexGeneratorService {
 
   // --- Regexes de Categoria Única ---
   private generateEmail(): string {
-    return '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{3,}$';
+    return '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$';
   }
 
   private generatePhone(): string {

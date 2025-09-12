@@ -78,3 +78,5 @@ h1, h2, h3, p {
 
 // Estilos de Layout (Layout)
 // O layout principal já está no app.component.scss
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

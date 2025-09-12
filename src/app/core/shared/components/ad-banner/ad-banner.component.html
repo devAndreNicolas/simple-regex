@@ -1,3 +1,22 @@
-<a [href]="linkUrl" target="_blank" class="ad-banner-link">
-  <img [src]="imageUrl" [alt]="altText" class="ad-banner-image">
-</a>
+<div class="ad-container">
+  <!-- Real AdSense -->
+  <ng-container *ngIf="mode === 'real'; else fakeAd">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </ng-container>
+
+  <!-- Fake Ad (nativo, bonito, não invasivo) -->
+  <ng-template #fakeAd>
+    <div class="fake-native-ad">
+      <h4>🔎 Aprenda Regex com um Guia Visual</h4>
+      <p>Confira um passo a passo intuitivo para dominar expressões regulares.</p>
+      <a (click)="openRegexGuide(); $event.preventDefault()">
+        Acessar artigo →
+      </a>
+    </div>
+  </ng-template>
+</div>

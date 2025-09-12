@@ -1,61 +1,41 @@
-:host {
-  display: flex; /* Torna o host um container flexível */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  margin: 2rem auto;
-  cursor: pointer;
-}
-
-.ad-banner-link {
-  display: block;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease-in-out;
-  
-  /* Padrão para mobile: simula um banner de 320x50 */
-  max-height: 50px;
-  aspect-ratio: 320 / 50;
-  max-width: 320px; /* Garante que o banner não seja maior que a largura do celular */
-  
-  &:hover {
-    transform: scale(1.02);
-  }
-}
-
-.ad-banner-image {
+.ad-container {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  transition: transform 0.2s ease-in-out;
+  margin: 2rem 0;
 }
 
-/* Ajustes para telas maiores que 640px (smartphones maiores, tablets) */
-@media (min-width: 640px) {
-  .ad-banner-link {
-    /* Simula um banner de 468x60 ou 320x100 */
-    max-height: 100px;
-    aspect-ratio: 4.68 / 1;
-    max-width: 468px; /* Limita a largura do banner para essa resolução */
-  }
+.fake-native-ad {
+  background-color: #f4f6f8;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  font-family: system-ui, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
 }
 
-/* Ajustes para telas maiores que 768px (tablets e desktops) */
-@media (min-width: 768px) {
-  .ad-banner-link {
-    /* Simula um retângulo grande de 336x280 */
-    max-height: 280px;
-    aspect-ratio: 336 / 280;
-    max-width: 336px; /* Limita a largura do banner para essa resolução */
-  }
+.fake-native-ad:hover {
+  background-color: #e9ecef;
 }
 
-/* Ajustes para telas maiores que 1024px (desktops) */
-@media (min-width: 1024px) {
-  .ad-banner-link {
-    /* Simula um banner líder de 728x90 */
-    max-height: 90px;
-    aspect-ratio: 728 / 90;
-    max-width: 728px; /* Limita a largura do banner para essa resolução */
-  }
+.fake-native-ad h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.fake-native-ad p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.fake-native-ad a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.fake-native-ad a:hover {
+  text-decoration: underline;
 }
