@@ -30,7 +30,7 @@ import { RegexGuideModalComponent } from "./core/features/regex-guide-modal/rege
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'regex-tool';
+  title = 'simple-regex';
 
   generatedRegex: string = '';
   testText: string = '';
