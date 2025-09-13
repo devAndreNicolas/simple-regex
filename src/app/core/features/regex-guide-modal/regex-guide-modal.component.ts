@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -19,9 +20,10 @@ import { MatDialogRef } from '@angular/material/dialog';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
+    MatRadioModule
   ],
   templateUrl: './regex-guide-modal.component.html',
-  styleUrl: './regex-guide-modal.component.scss'
+  styleUrls: ['./regex-guide-modal.component.scss']
 })
 export class RegexGuideModalComponent implements OnInit {
   // FormGroups para cada passo do guia
@@ -33,26 +35,24 @@ export class RegexGuideModalComponent implements OnInit {
   testadorForm!: FormGroup;
   praticaForm!: FormGroup;
 
-  // Variáveis para os exemplos de regex
+  readonly emailExample = "usuario@gmail.com"
   readonly emailRegex = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$';
 
-  // Dados para o guia de sintaxe
   readonly syntaxGuide = [
-    { pattern: '\\d', description: 'Encontra qualquer dígito (0-9).' },
-    { pattern: '\\s', description: 'Encontra qualquer espaço em branco.' },
-    { pattern: '.', description: 'Encontra qualquer caractere, exceto quebras de linha.' },
-    { pattern: '^', description: 'Início da linha.' },
-    { pattern: '$', description: 'Fim da linha.' },
-    { pattern: '[ ]', description: 'Define um conjunto de caracteres. Ex: [abc] encontra "a", "b" ou "c".' }
+    { pattern: '\\d', description: 'Encontra qualquer dígito (0-9).', example: '123, 0, 9' },
+    { pattern: '\\s', description: 'Encontra qualquer espaço em branco.', example: 'espaço, tab' },
+    { pattern: '.', description: 'Encontra qualquer caractere, exceto quebras de linha.', example: 'a, 1, *' },
+    { pattern: '^', description: 'Indica o início da linha.', example: 'Começa com...' },
+    { pattern: '$', description: 'Indica o fim da linha.', example: 'Termina com...' },
+    { pattern: '[ ]', description: 'Define um conjunto de caracteres. Ex: [abc] encontra "a", "b" ou "c".', example: 'a, b ou c' }
   ];
 
-  // Dados para o guia de quantificadores
   readonly quantifierGuide = [
-    { pattern: '+', description: 'Uma ou mais vezes.' },
-    { pattern: '*', description: 'Zero ou mais vezes.' },
-    { pattern: '?', description: 'Zero ou uma vez.' },
-    { pattern: '{n}', description: 'Exatamente "n" vezes. Ex: \\d{3} encontra "123".' },
-    { pattern: '{n,m}', description: 'De "n" a "m" vezes. Ex: \\d{2,4} encontra "12", "123" ou "1234".' }
+    { pattern: '+', description: 'Uma ou mais vezes.', example: 'abc+, encontra abcc, abccc' },
+    { pattern: '*', description: 'Zero ou mais vezes.', example: 'abc*, encontra ab, abc, abcc' },
+    { pattern: '?', description: 'Zero ou uma vez.', example: 'abc?, encontra ab ou abc' },
+    { pattern: '{n}', description: 'Exatamente "n" vezes. Ex: \\d{3} encontra "123".', example: 'exato 3 dígitos' },
+    { pattern: '{n,m}', description: 'De "n" a "m" vezes. Ex: \\d{2,4} encontra "12", "123" ou "1234".', example: 'entre 2 e 4 dígitos' }
   ];
 
   constructor(
@@ -62,7 +62,7 @@ export class RegexGuideModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.introForm = this.fb.group({
-      understandIntro: [false, Validators.requiredTrue]
+      usedRegex: ['', Validators.required],
     });
 
     this.oQueEForm = this.fb.group({

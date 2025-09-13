@@ -6,7 +6,7 @@ import { RegexGuideModalComponent } from '../../../features/regex-guide-modal/re
 @Component({
   selector: 'app-ad-banner',
   standalone: true,
-  imports: [CommonModule, MatDialogModule ,RegexGuideModalComponent],
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './ad-banner.component.html',
   styleUrls: ['./ad-banner.component.scss']
 })
