@@ -27,6 +27,23 @@ const angularApp = new AngularNodeAppEngine();
 /**
  * Serve static files from /browser
  */
+
+app.get('/sitemap.xml', (req, res) => {
+  const sitemap = `
+  <?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://simple-regex.vercel.app/</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+    </url>
+    <!-- Add more dynamic URLs here -->
+  </urlset>`;
+  res.header('Content-Type', 'application/xml');
+  res.send(sitemap);
+});
+
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
