@@ -5,12 +5,14 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
-import { join } from 'node:path';
+import path, { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
+const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 
 /**
  * Example Express Rest API endpoints can be defined here.
@@ -29,18 +31,7 @@ const angularApp = new AngularNodeAppEngine();
  */
 
 app.get('/sitemap.xml', (req, res) => {
-  const sitemap = `
-  <?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>https://simple-regex.vercel.app</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-    </url>
-  </urlset>`;
-  res.header('Content-Type', 'application/xml');
-  res.send(sitemap);
+  res.sendFile(join(browserDistFolder, 'assets', 'sitemap.xml'));
 });
 
 app.use(

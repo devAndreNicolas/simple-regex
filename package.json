@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:ssr": "ng run regex-generator-app:build:production && ng run regex-generator-app:server:production"
+    "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs"
   },
   "dependencies": {
     "@angular/animations": "^20.3.0",
