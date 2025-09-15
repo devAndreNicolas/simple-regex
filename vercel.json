@@ -2,22 +2,15 @@
   "rewrites": [
     {
       "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
+      "destination": "/dist/regex-generator-app/browser/sitemap.xml"
     },
     {
       "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "destination": "/dist/regex-generator-app/browser/robots.txt"
     },
     {
       "source": "/(.*)",
       "destination": "/dist/regex-generator-app/browser/index.html"
-    }
-  ],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist/regex-generator-app/browser" }
     }
   ]
 }
