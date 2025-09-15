@@ -1,10 +1,9 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 import { RegexValidatorService } from './core/services/regex-validator.service';
 import { RegexExplainerService } from './core/services/regex-explainer.service';
-import { NgIf, NgFor } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { OnboardingModalComponent } from './core/shared/components/onboarding-modal/onboarding-modal.component';
 import { AlertComponent } from './core/shared/components/alert/alert.component';
@@ -12,7 +11,6 @@ import { RegexDisplayComponent } from './core/shared/components/regex-display/re
 import { AdBannerComponent } from "./core/shared/components/ad-banner/ad-banner.component";
 import { RegexGeneratorService } from './core/services/regex-generator.service';
 import { RegexDescriptionService } from './core/services/regex-description.service';
-import { RegexGuideModalComponent } from "./core/features/regex-guide-modal/regex-guide-modal.component";
 
 @Component({
   selector: 'app-root',
@@ -56,6 +54,8 @@ export class AppComponent implements OnInit {
     private explainerService: RegexExplainerService,
     private regexGeneratorService: RegexGeneratorService,
     private descriptionService: RegexDescriptionService,
+    private titleService: Title,
+    private metaService: Meta,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
@@ -88,6 +88,7 @@ export class AppComponent implements OnInit {
     const regex = this.regexGeneratorService.getRegex(type, category);
     this.generatedRegex = regex;
     this.explainRegex(this.generatedRegex);
+    this.updateMetaTags(type, category);
   }
 
   // Método de validação de texto
@@ -124,5 +125,42 @@ export class AppComponent implements OnInit {
   private setFeedback(message: string, type: 'success' | 'error' | 'warning'): void {
     this.feedbackMessage = message;
     this.feedbackType = type;
+  }
+  
+  private updateMetaTags(type: string, category?: string): void {
+    const typeMap: { [key: string]: string } = {
+      'email': 'E-mail',
+      'phone': 'Telefone',
+      'cpf': 'CPF',
+      'cep': 'CEP',
+      'date': 'Data',
+      'url': 'URL',
+    };
+    const categoryMap: { [key: string]: string } = {
+      'brazil': 'do Brasil',
+      'usa': 'dos EUA',
+      'canada': 'do Canadá',
+      'uk': 'do Reino Unido',
+      'germany': 'da Alemanha',
+      'optional': 'com HTTPS Opcional',
+      'mandatory': 'com HTTPS Obrigatório',
+      'default': '',
+    };
+    
+    const typeDescription = typeMap[type] || '';
+    const categoryDescription = categoryMap[category || 'default'] || '';
+    
+    let description = '';
+    if (typeDescription && categoryDescription && categoryDescription !== 'default') {
+        description = `Gere a regex para ${typeDescription} ${categoryDescription} de forma simples e rápida com a nossa ferramenta online.`;
+    } else if (typeDescription) {
+        description = `Gere e teste a regex para ${typeDescription} de forma simples e rápida com a nossa ferramenta online.`;
+    } else {
+        description = 'Gere e teste expressões regulares de forma simples e rápida com nossa ferramenta intuitiva.';
+    }
+
+    const newTitle = `Regex para ${typeDescription} ${categoryDescription} | Simple Regex`.trim();
+    this.titleService.setTitle(newTitle);
+    this.metaService.updateTag({ name: 'description', content: description });
   }
 }

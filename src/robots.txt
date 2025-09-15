@@ -1,0 +1,6 @@
+Permite o rastreamento de todos os robôs em todas as páginas
+User-agent: *
+Allow: /
+
+Caminho para o sitemap do site
+Sitemap: https://simple-regex.vercel.app/sitemap.xml
