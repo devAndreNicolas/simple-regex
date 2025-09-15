@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { RegexValidatorService } from './core/services/regex-validator.service';
@@ -55,13 +55,16 @@ export class AppComponent implements OnInit {
     private validatorService: RegexValidatorService,
     private explainerService: RegexExplainerService,
     private regexGeneratorService: RegexGeneratorService,
-    private descriptionService: RegexDescriptionService
+    private descriptionService: RegexDescriptionService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
-    const onboardingDone = localStorage.getItem('onboardingDone');
-    if (!onboardingDone) {
-      this.showOnboarding = true;
+    if(isPlatformBrowser(this.platformId)){
+      const onboardingDone = localStorage.getItem('onboardingDone');
+      if (!onboardingDone) {
+        this.showOnboarding = true;
+      }
     }
   }
 

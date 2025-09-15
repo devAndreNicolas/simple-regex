@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { CommonModule, NgIf } from '@angular/common';
+import { Component, EventEmitter, Inject, Output, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser, NgIf } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -12,9 +12,9 @@ import { LucideAngularModule } from 'lucide-angular';
         <h2>Bem-vindo ao Gerador de Regex!</h2>
         <p>Este guia rápido irá te ajudar a começar:</p>
         <ol>
-          <li>**Gerador:** Escolha o tipo de regex que precisa (ex: E-mail).</li>
-          <li>**Explicador:** Entenda cada parte da regex gerada.</li>
-          <li>**Testador:** Cole um texto para ver se ele corresponde ao padrão.</li>
+          <li>Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
+          <li>Explicador: Entenda cada parte da regex gerada.</li>
+          <li>Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
         </ol>
         <button class="btn btn-primary" (click)="closeModal()">Entendi!</button>
       </div>
@@ -23,10 +23,18 @@ import { LucideAngularModule } from 'lucide-angular';
   styleUrls: ['./onboarding-modal.component.scss']
 })
 export class OnboardingModalComponent {
-  @Output() closed = new EventEmitter<void>();
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ){}
 
+  @Output() closed = new EventEmitter<void>();
+  
   closeModal(): void {
-    localStorage.setItem('onboardingDone', 'true');
+    // Apenas execute este código se estiver no navegador.
+    // Isso evita o erro no servidor, que não tem localStorage.
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('onboardingDone', 'true');
+    }
     this.closed.emit();
   }
 }
