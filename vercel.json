@@ -1,22 +1,28 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "dist/regex-generator-app/server/main.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": "dist/regex-generator-app/browser/**"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*\\.(?:css|js|map|xml|png|jpg|ico|gif|svg|woff2|woff|ttf))",
-      "dest": "dist/regex-generator-app/browser/$1"
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
     },
     {
-      "src": "/(.*)",
-      "dest": "dist/regex-generator-app/server/main.js"
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=86400"
+        }
+      ]
     }
   ]
 }
