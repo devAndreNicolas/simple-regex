@@ -4,6 +4,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { AlertCircle, CalendarDays, CheckCircle, Copy, CreditCard, Globe, Info, LucideAngularModule, Mail, MapPin, Phone, XCircle } from 'lucide-angular';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,6 +25,6 @@ export const appConfig: ApplicationConfig = {
         CalendarDays,
         Globe
       })
-    )
+    ), provideClientHydration(withEventReplay())
   ]
 };
