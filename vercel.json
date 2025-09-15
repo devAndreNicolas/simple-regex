@@ -10,14 +10,14 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/dist/regex-generator-app/browser/index.html"
     }
   ],
   "builds": [
     {
-      "src": "dist/server/server.mjs",
-      "use": "@vercel/node"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/regex-generator-app/browser" }
     }
-  ],
-  "outputDirectory": "dist/browser"
+  ]
 }
