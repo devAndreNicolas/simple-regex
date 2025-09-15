@@ -1,16 +1,22 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/sitemap.xml",
-      "destination": "/dist/regex-generator-app/browser/sitemap.xml"
+      "src": "dist/regex-generator-app/server/main.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": "dist/regex-generator-app/browser/**"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*\\.(?:css|js|map|xml|png|jpg|ico|gif|svg|woff2|woff|ttf))",
+      "dest": "dist/regex-generator-app/browser/$1"
     },
     {
-      "source": "/robots.txt",
-      "destination": "/dist/regex-generator-app/browser/robots.txt"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/dist/regex-generator-app/browser/index.html"
+      "src": "/(.*)",
+      "dest": "dist/regex-generator-app/server/main.js"
     }
   ]
 }
