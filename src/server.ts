@@ -6,11 +6,11 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import path, { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
-const serverDistFolder = join(__dirname, '..');
-const browserDistFolder = join(serverDistFolder, 'browser');
+const browserDistFolder = join(dirname(fileURLToPath(import.meta.url)), '../browser');
 
 /**
  * Example Express Rest API endpoints can be defined here.
@@ -29,7 +29,7 @@ const browserDistFolder = join(serverDistFolder, 'browser');
  */
 
 app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(join(browserDistFolder, 'assets', 'sitemap.xml'));
+  res.sendFile(path.join(__dirname, 'assets', 'sitemap.xml'));
 });
 
 app.use(
