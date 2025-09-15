@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node dist/regex-generator-app/server/server.mjs",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs"
+    "build:ssr": "ng run regex-generator-app:build:production && ng run regex-generator-app:server:production"
   },
   "dependencies": {
     "@angular/animations": "^20.3.0",
