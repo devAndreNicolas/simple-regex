@@ -6,13 +6,11 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import path, { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
-const serverDistFolder = dirname(fileURLToPath(import.meta.url));
+const serverDistFolder = join(__dirname, '..');
+const browserDistFolder = join(serverDistFolder, 'browser');
 
 /**
  * Example Express Rest API endpoints can be defined here.
