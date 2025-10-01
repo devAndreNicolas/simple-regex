@@ -1,0 +1,181 @@
+/* Estilos de Módulos (Modules) */
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border);
+  background-color: var(--color-background-card);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--box-shadow);
+  
+  &:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+
+  .icon {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
+  &:hover .icon {
+    color: white;
+  }
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem; /* Espaçamento consistente entre todos os elementos */
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  /* Aplicando regras de sizing a TODOS os itens: .btn e .select-group */
+  & > .btn, & > .select-group {
+    flex-grow: 1; /* Permite que cresçam */
+    min-width: 100px;
+    /* Padrão Mobile (< 768px): 1 item por linha */
+    flex-basis: 100%; 
+  }
+  
+  /* Media Query para 768px+: Desktop/Tablet Grande - 2 itens por linha */
+  @media (min-width: 768px) {
+    & > .btn, & > .select-group {
+        /* Garante 2 itens por linha, subtraindo metade do gap */
+        flex-basis: calc(50% - 0.5rem); 
+        max-width: none;
+    }
+  }
+  
+  lucide-icon {
+    width: 18px;
+    height: 24px;
+  }
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  
+  label {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  select {
+    width: 100%;
+    background-color: var(--color-background-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 0.75rem 1rem;
+    appearance: none;
+    /* Estilo do ícone de dropdown */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path fill="%23718096" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    transition: all 0.2s ease-in-out;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(85, 66, 246, 0.5);
+    }
+  }
+}
+
+.text-area {
+  width: 100%;
+  min-height: 150px;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-family: monospace;
+  resize: vertical;
+}
+
+/* O Grid principal agora tem a responsividade reforçada */
+.main-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr; /* Padrão mobile: apenas uma coluna */
+  
+  /* CORREÇÃO DE ESTOURO HORIZONTAL: Garante que os filhos do grid (as sections) se comprimam corretamente */
+  & > .section {
+    min-width: 0;
+  }
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr; /* Padrão desktop: duas colunas */
+    .section:nth-child(3) {
+      grid-column: 1 / span 2; /* A terceira seção ocupa as duas colunas */
+    }
+  }
+}
+
+.section {
+  background-color: var(--color-background-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+  p {
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+  }
+}
+
+.regex-explainer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  .regex-part {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 0.75rem;
+    position: relative;
+    cursor: help;
+  }
+  .explanation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+    background-color: var(--color-text-primary);
+    color: var(--color-background);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 0.8rem;
+  }
+  .regex-part:hover .explanation {
+    display: block;
+  }
+}
+
+.regex-description {
+  font-style: italic;
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-left: 4px solid #007bff;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
