@@ -12,7 +12,7 @@ import { LucideAngularModule } from 'lucide-angular';
         <h2>Bem-vindo ao Simple Regex!</h2>
         <p>Confira rapidamente nossas funcionalidades para começar:</p>
         <ol>
-          <li>Guia de Visual de Regex: Aprenda e entenda expressões regulares (Regex) de forma simples.</li>
+          <li>Guia de Visual de Regex: Aprenda e entenda expressões regulares de forma simples.</li>
           <li>Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
           <li>Explicador: Entenda cada parte da regex gerada.</li>
           <li>Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
