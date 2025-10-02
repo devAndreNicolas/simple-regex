@@ -1,17 +1,109 @@
-.step-buttons {
-  margin-top: 1rem;
+/* Estilos para a grid de cards de sintaxe/quantificadores */
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
 }
 
-.feedback {
-  margin-top: 1rem;
+/* Container do card com efeito de acordeão */
+.expandable-card {
+  background-color: var(--color-background-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background-color: var(--color-background-card-hover, #f0f0f0);
+}
+
+.expandable-card:hover .card-header {
+  background-color: var(--color-background-hover);
+}
+
+.pattern-box {
+  background-color: var(--color-background);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--border-radius, 4px);
   font-size: 1rem;
+  font-weight: 700;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.description {
+  font-size: 0.9rem;
+  margin: 0;
+  flex-grow: 1;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
+.toggle-icon {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Oculta o conteúdo e cria a transição */
+.card-content {
+  max-height: 0;
+  padding: 0 0.75rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Estado de card expandido */
+.expandable-card.expanded {
+  background-color: var(--color-background);
+}
+
+.expandable-card.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.expandable-card.expanded .card-content {
+  max-height: 200px;
+  /* Um valor grande o suficiente para o conteúdo */
+  padding: 0.75rem;
+}
+
+.example-box {
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.9rem;
+
+  .example-text {
+    font-family: monospace;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Ajustes para telas maiores */
+@media (min-width: 601px) {
+  .card-header {
+    padding: 1rem;
+
+    .pattern-box {
+      font-size: 1.2rem;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    max-height: 0;
+    /* Volta a esconder o conteúdo em desktop */
+    padding: 0 1rem;
+  }
+
+  .expandable-card.expanded .card-content {
+    max-height: 200px;
+    /* Ajusta o valor para telas maiores */
+  }
 }

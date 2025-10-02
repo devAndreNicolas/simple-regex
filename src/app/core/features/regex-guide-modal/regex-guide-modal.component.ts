@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,10 +25,10 @@ import { MatDialogRef } from '@angular/material/dialog';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
   ],
   templateUrl: './regex-guide-modal.component.html',
-  styleUrls: ['./regex-guide-modal.component.scss']
+  styleUrls: ['./regex-guide-modal.component.scss'],
 })
 export class RegexGuideModalComponent implements OnInit {
   // FormGroups para cada passo do guia
@@ -35,24 +40,79 @@ export class RegexGuideModalComponent implements OnInit {
   testadorForm!: FormGroup;
   praticaForm!: FormGroup;
 
-  readonly emailExample = "usuario@gmail.com"
+  readonly emailExample = 'usuario@gmail.com';
   readonly emailRegex = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$';
 
   readonly syntaxGuide = [
-    { pattern: '\\d', description: 'Encontra qualquer dígito (0-9).', example: '123, 0, 9' },
-    { pattern: '\\s', description: 'Encontra qualquer espaço em branco.', example: 'espaço, tab' },
-    { pattern: '.', description: 'Encontra qualquer caractere, exceto quebras de linha.', example: 'a, 1, *' },
-    { pattern: '^', description: 'Indica o início da linha.', example: 'Começa com...' },
-    { pattern: '$', description: 'Indica o fim da linha.', example: 'Termina com...' },
-    { pattern: '[ ]', description: 'Define um conjunto de caracteres. Ex: [abc] encontra "a", "b" ou "c".', example: 'a, b ou c' }
+    {
+      pattern: '\\d',
+      description: 'Qualquer dígito (de 0 a 9).',
+      example: '<b>123</b>',
+      expanded: false,
+    },
+    {
+      pattern: '\\s',
+      description: 'Qualquer espaço em branco.',
+      example: 'Olá,<b> </b>Mundo',
+      expanded: false,
+    },
+    {
+      pattern: '.',
+      description: 'Qualquer caractere (exceto quebras de linha).',
+      example: 'a<b>.</b>b<b>.</b>c',
+      expanded: false,
+    },
+    {
+      pattern: '^',
+      description: 'Início da linha.',
+      example: '<b>^</b>[Olá] = "<b>Olá</b>, mundo"',
+      expanded: false,
+    },
+    {
+      pattern: '$',
+      description: 'Fim da linha.',
+      example: '[mundo]<b>$</b> = "Olá, <b>mundo</b>"',
+      expanded: false,
+    },
+    {
+      pattern: '[ ]',
+      description: 'Um dos caracteres dentro dos colchetes.',
+      example: '[abc] = "<b>a</b>" ou "<b>b</b>"',
+      expanded: false,
+    },
   ];
 
   readonly quantifierGuide = [
-    { pattern: '+', description: 'Uma ou mais vezes.', example: 'abc+, encontra abcc, abccc' },
-    { pattern: '*', description: 'Zero ou mais vezes.', example: 'abc*, encontra ab, abc, abcc' },
-    { pattern: '?', description: 'Zero ou uma vez.', example: 'abc?, encontra ab ou abc' },
-    { pattern: '{n}', description: 'Exatamente "n" vezes. Ex: \\d{3} encontra "123".', example: 'exato 3 dígitos' },
-    { pattern: '{n,m}', description: 'De "n" a "m" vezes. Ex: \\d{2,4} encontra "12", "123" ou "1234".', example: 'entre 2 e 4 dígitos' }
+    {
+      pattern: '+',
+      description: 'Uma ou mais vezes.',
+      example: 'abc<b>+</b> = "abccc"',
+      expanded: false,
+    },
+    {
+      pattern: '*',
+      description: 'Zero ou mais vezes.',
+      example: 'abc<b>*</b> = "ab" ou "abcc"',
+      expanded: false,
+    },
+    {
+      pattern: '?',
+      description: 'Zero ou uma vez.',
+      example: 'abc<b>?</b> = "ab" ou "abc"',
+      expanded: false,
+    },
+    {
+      pattern: '{n}',
+      description: 'Exatamente n vezes.',
+      example: '\\d<b>{3}</b> = "<b>123</b>"',
+      expanded: false,
+    },
+    {
+      pattern: '{n,m}',
+      description: 'De n a m vezes.',
+      example: '\\d<b>{2,4}</b> = "<b>1234</b>"',
+      expanded: false,
+    },
   ];
 
   constructor(
@@ -66,28 +126,44 @@ export class RegexGuideModalComponent implements OnInit {
     });
 
     this.oQueEForm = this.fb.group({
-      understoodConcept: [false, Validators.requiredTrue]
+      understoodConcept: [false, Validators.requiredTrue],
     });
 
     this.lendoRegexForm = this.fb.group({
-      understoodReading: [false, Validators.requiredTrue]
+      understoodReading: [false, Validators.requiredTrue],
     });
 
     this.quantificadoresForm = this.fb.group({
-      understoodQuantifiers: [false, Validators.requiredTrue]
+      understoodQuantifiers: [false, Validators.requiredTrue],
     });
 
     this.geradorForm = this.fb.group({
-      understoodGenerator: [false, Validators.requiredTrue]
+      understoodGenerator: [false, Validators.requiredTrue],
     });
 
     this.testadorForm = this.fb.group({
-      understoodTester: [false, Validators.requiredTrue]
+      understoodTester: [false, Validators.requiredTrue],
     });
 
     this.praticaForm = this.fb.group({
-      practiceAnswer: ['', [Validators.required, Validators.pattern(this.emailRegex)]]
+      practiceAnswer: [
+        '',
+        [Validators.required, Validators.pattern(this.emailRegex)],
+      ],
     });
+  }
+
+  toggleCard(clickedItem: any, guideArray: any[]): void {
+    if (clickedItem.expanded) {
+      clickedItem.expanded = false;
+      return;
+    }
+
+    guideArray.forEach((item) => {
+      item.expanded = false;
+    });
+
+    clickedItem.expanded = true;
   }
 
   checkPractice(): boolean {

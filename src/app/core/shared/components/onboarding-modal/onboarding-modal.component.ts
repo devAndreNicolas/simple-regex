@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Inject, Output, PLATFORM_ID } from '@angular/core';
-import { CommonModule, isPlatformBrowser, NgIf } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -11,8 +11,8 @@ import { LucideAngularModule } from 'lucide-angular';
       <div class="modal-content" (click)="$event.stopPropagation()">
         <h2>Bem-vindo ao Simple Regex!</h2>
         <p>Confira rapidamente nossas funcionalidades para começar:</p>
-        <ol>
-          <li>Guia de Visual de Regex: Aprenda e entenda expressões regulares de forma simples.</li>
+        <ol class="modal-list">
+          <li>Guia Interativo de Regex: Aprenda e entenda expressões regulares de forma simples.</li>
           <li>Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
           <li>Explicador: Entenda cada parte da regex gerada.</li>
           <li>Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
