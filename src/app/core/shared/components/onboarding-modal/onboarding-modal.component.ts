@@ -9,12 +9,13 @@ import { LucideAngularModule } from 'lucide-angular';
   template: `
     <div class="modal-overlay" (click)="closeModal()">
       <div class="modal-content" (click)="$event.stopPropagation()">
-        <h2>Bem-vindo ao Gerador de Regex!</h2>
-        <p>Este guia rápido irá te ajudar a começar:</p>
+        <h2>Bem-vindo ao Simple Regex!</h2>
+        <p>Confira rapidamente nossas funcionalidades para começar:</p>
         <ol>
-          <li>Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
-          <li>Explicador: Entenda cada parte da regex gerada.</li>
-          <li>Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
+          <li>1. Guia de Visual de Regex: Aprenda e entenda expressões regulares (Regex) de forma simples.</li>
+          <li>2. Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
+          <li>3. Explicador: Entenda cada parte da regex gerada.</li>
+          <li>4. Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
         </ol>
         <button class="btn btn-primary" (click)="closeModal()">Entendi!</button>
       </div>
