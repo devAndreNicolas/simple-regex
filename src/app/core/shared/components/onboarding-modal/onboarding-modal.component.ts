@@ -9,7 +9,7 @@ import { LucideAngularModule } from 'lucide-angular';
   template: `
     <div class="modal-overlay" (click)="closeModal()">
       <div class="modal-content" (click)="$event.stopPropagation()">
-        <h2>Bem-vindo ao Simple Regex!</h2>
+        <h2>Bem-vindo ao Regex Simples!</h2>
         <p>Confira rapidamente nossas funcionalidades para começar:</p>
         <ol class="modal-list">
           <li>Guia Interativo de Regex: Aprenda e entenda expressões regulares de forma simples.</li>

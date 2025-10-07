@@ -28,7 +28,7 @@ import { RegexDescriptionService } from '../../core/services/regex-description.s
   styleUrls: ['./home.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'simple-regex';
+  title = 'regex-simples';
   
   generatedRegex: string = '';
   testText: string = '';
@@ -152,7 +152,7 @@ export class HomeComponent implements OnInit {
         description = 'Gere e teste expressões regulares de forma simples e rápida com nossa ferramenta intuitiva.';
     }
   
-    const newTitle = `Regex para ${typeDescription} ${categoryDescription} | Simple Regex`.trim();
+    const newTitle = `Regex para ${typeDescription} ${categoryDescription} | Regex Simples`.trim();
     this.titleService.setTitle(newTitle);
     this.metaService.updateTag({ name: 'description', content: description });
   }

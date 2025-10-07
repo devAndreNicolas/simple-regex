@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 Caminho para o sitemap do site
-Sitemap: https://simple-regex.vercel.app/sitemap.xml
+Sitemap: https://regex-simples.vercel.app/sitemap.xml
