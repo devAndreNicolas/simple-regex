@@ -6,13 +6,37 @@
       <p i18n="@@headerBrandSlogan">Ferramenta para iniciantes em Expressões Regulares.</p>
     </div>
     <nav class="main-nav">
-      <ul>
-        <li><a routerLink="/" i18n="@@navHome">Início</a></li>
-        <li><a routerLink="/sobre" i18n="@@navAbout">Sobre</a></li>
-        <li><a routerLink="/contato" i18n="@@navContact">Contato</a></li>
-        <li><a routerLink="/politica-de-privacidade" i18n="@@navPrivacy">Política de Privacidade</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><a routerLink="/" i18n="@@navHome">Início</a></li>
+    
+    <li>
+      <a 
+        i18n="@@navAbout" 
+        i18n-routerLink="@@routePathAbout" 
+        routerLink="sobre">
+        Sobre
+      </a>
+    </li>
+    
+    <li>
+      <a 
+        i18n="@@navContact" 
+        i18n-routerLink="@@routePathContact" 
+        routerLink="contato">
+        Contato
+      </a>
+    </li>
+    
+    <li>
+      <a 
+        i18n="@@navPrivacy" 
+        i18n-routerLink="@@routePathPrivacy" 
+        routerLink="politica-de-privacidade">
+        Política de Privacidade
+      </a>
+    </li>
+  </ul>
+    </nav>  
   </div>
 </header>
   
