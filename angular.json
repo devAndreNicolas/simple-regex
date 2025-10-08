@@ -34,7 +34,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -92,6 +93,9 @@
                 "src/favicon.ico",
                 "src/assets"
               ]
+            },
+            "en": {
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -104,6 +108,12 @@
             },
             "development": {
               "buildTarget": "regex-generator-app:build:development"
+            },
+            "en": {
+                "buildTarget": "regex-generator-app:build:development,en"
+            },
+            "pt": {
+                "buildTarget": "regex-generator-app:build:development,pt"
             }
           },
           "defaultConfiguration": "development"
@@ -116,7 +126,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",

@@ -42,7 +42,7 @@ export class RegexDescriptionService {
         if (category === 'optional') {
           return $localize`:@@descUrlOptional:Valida URLs com ou sem protocolo (http:// ou https://), como www.site.com ou https://site.com.`;
         } else if (category === 'mandatory') {
-          return $localize`:@@descUrlMandatory:Valida URLs que **exigem** o protocolo (http:// ou https://), como https://site.com.`;
+          return $localize`:@@descUrlMandatory:Valida URLs que exigem o protocolo (http:// ou https://), como https://site.com.`;
         }
         break;
     }

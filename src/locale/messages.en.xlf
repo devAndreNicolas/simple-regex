@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file source-language="pt-BR" target-language="en" datatype="plaintext" original="ng2.template">
+<body>
+<trans-unit id="headerBrandName" datatype="html">
+<source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/&quot;&gt;"/>Regex Simples<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+<target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/&quot;&gt;"/>Simple Regex<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">5,6</context>
+</context-group>
+</trans-unit>
+<trans-unit id="headerBrandSlogan" datatype="html">
+<source>Ferramenta para iniciantes em Expressões Regulares.</source>
+<target>Tool for beginners in Regular Expressions.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">6,8</context>
+</context-group>
+</trans-unit>
+<trans-unit id="navHome" datatype="html">
+<source>Início</source>
+<target>Home</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">10,11</context>
+</context-group>
+</trans-unit>
+<trans-unit id="navAbout" datatype="html">
+<source>Sobre</source>
+<target>About</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">11,12</context>
+</context-group>
+</trans-unit>
+<trans-unit id="navContact" datatype="html">
+<source>Contato</source>
+<target>Contact</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">12,13</context>
+</context-group>
+</trans-unit>
+<trans-unit id="navPrivacy" datatype="html">
+<source>Política de Privacidade</source>
+<target>Privacy Policy</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">13,15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="footerCopyright" datatype="html">
+<source>© 2025 Regex Simples. Todos os direitos reservados.</source>
+<target>© 2025 Simple Regex. All rights reserved.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.component.html</context>
+<context context-type="linenumber">25,27</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routeTitleHome" datatype="html">
+<source>Início</source>
+<target>Home</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">13</context>
+</context-group>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">20</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routePathHome" datatype="html">
+<source>inicio</source>
+<target>home</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routePathAbout" datatype="html">
+<source>sobre</source>
+<target>about</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">24</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routeTitleAbout" datatype="html">
+<source>Sobre</source>
+<target>About</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">26</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routePathContact" datatype="html">
+<source>contato</source>
+<target>contact</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">30</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routeTitleContact" datatype="html">
+<source>Contato</source>
+<target>Contact</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">32</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routePathPrivacy" datatype="html">
+<source>politica-de-privacidade</source>
+<target>privacy-policy</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">36</context>
+</context-group>
+</trans-unit>
+<trans-unit id="routeTitlePrivacy" datatype="html">
+<source>Política de Privacidade</source>
+<target>Privacy Policy</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/app.routes.ts</context>
+<context context-type="linenumber">38</context>
+</context-group>
+</trans-unit>
+<trans-unit id="introFormAriaLabel" datatype="html">
+<source>Introdução ao guia de regex</source>
+<target>Introduction to the regex guide</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">3,4</context>
+</context-group>
+</trans-unit>
+<trans-unit id="introTitle" datatype="html">
+<source>Bem-vindo ao Guia Interativo de Regex</source>
+<target>Welcome to the Interactive Regex Guide</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">6,7</context>
+</context-group>
+</trans-unit>
+<trans-unit id="introP1" datatype="html">
+<source> Este guia vai te ajudar a aprender o básico de Expressões Regulares (Regex), uma ferramenta poderosa para validar e manipular textos.
+</source>
+<target> This guide will help you learn the basics of Regular Expressions (Regex), a powerful tool to validate and manipulate text.
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">8,10</context>
+</context-group>
+</trans-unit>
+<trans-unit id="introP2" datatype="html">
+<source>Vamos começar?</source>
+<target>Let's get started?</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">11,13</context>
+</context-group>
+</trans-unit>
+<trans-unit id="quizTitle" datatype="html">
+<source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Você já usou Regex antes?<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+<target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Have you used Regex before?<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">13,14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="quizAriaLabel" datatype="html">
+<source>Quiz: você já usou Regex antes?</source>
+<target>Quiz: Have you used Regex before?</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">17,19</context>
+</context-group>
+</trans-unit>
+<trans-unit id="radioSim" datatype="html">
+<source>Sim</source>
+<target>Yes</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">19,20</context>
+</context-group>
+</trans-unit>
+<trans-unit id="radioNao" datatype="html">
+<source>Não</source>
+<target>No</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">20,21</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnNextAriaLabel" datatype="html">
+<source>Próximo passo</source>
+<target>Next step</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">29,31</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnNext" datatype="html">
+<source>Próximo</source>
+<target>Next</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">31,32</context>
+</context-group>
+</trans-unit>
+<trans-unit id="oQueEFormAriaLabel" datatype="html">
+<source>O que é Regex?</source>
+<target>What is Regex?</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">38,39</context>
+</context-group>
+</trans-unit>
+<trans-unit id="oQueETitle" datatype="html">
+<source>O que é uma Expressão Regular?</source>
+<target>What is a Regular Expression?</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">40,41</context>
+</context-group>
+</trans-unit>
+<trans-unit id="oQueEP1" datatype="html">
+<source> Pense em Regex como um &quot;super-poder&quot; para encontrar e manipular textos. É um padrão que você cria para &quot;caçar&quot;
+informações em frases, documentos ou códigos. </source>
+<target> Think of Regex as a "superpower" to find and manipulate text.
+It is a pattern you create to "hunt" for information in sentences, documents, or code. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">42,44</context>
+</context-group>
+</trans-unit>
+<trans-unit id="cardEmail" datatype="html">
+<source>Validar e-mails</source>
+<target>Validate emails</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">50,52</context>
+</context-group>
+</trans-unit>
+<trans-unit id="cardPhone" datatype="html">
+<source>Encontrar telefones</source>
+<target>Find phone numbers</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">54,56</context>
+</context-group>
+</trans-unit>
+<trans-unit id="cardSearch" datatype="html">
+<source>Procurar palavras</source>
+<target>Search words</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">58,60</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodConceptAriaLabel" datatype="html">
+<source>Checkbox para confirmar entendimento do conceito</source>
+<target>Checkbox to confirm understanding of the concept</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">65,67</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodConcept" datatype="html">
+<source>Entendi a ideia</source>
+<target>I understand the idea</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">67,70</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnBackAriaLabel" datatype="html">
+<source>Voltar passo</source>
+<target>Go back step</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">71,72</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnBack" datatype="html">
+<source>Voltar</source>
+<target>Back</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">72,73</context>
+</context-group>
+</trans-unit>
+<trans-unit id="lendoRegexFormAriaLabel" datatype="html">
+<source>Lendo a sintaxe básica de regex</source>
+<target>Reading the basic regex syntax</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">91,93</context>
+</context-group>
+</trans-unit>
+<trans-unit id="lendoRegexTitle" datatype="html">
+<source>O Alfabeto da Regex</source>
+<target>The Regex Alphabet</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">94,95</context>
+</context-group>
+</trans-unit>
+<trans-unit id="lendoRegexP1" datatype="html">
+<source>Aprenda o significado dos caracteres mais comuns:</source>
+<target>Learn the meaning of the most common characters:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">95,97</context>
+</context-group>
+</trans-unit>
+<trans-unit id="lendoRegexExampleText" datatype="html">
+<source>Exemplo:</source>
+<target>Example:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">114,115</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodReadingAriaLabel" datatype="html">
+<source>Checkbox para confirmar entendimento da sintaxe</source>
+<target>Checkbox to confirm understanding of the syntax</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">124,126</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodReading" datatype="html">
+<source>Entendi a sintaxe</source>
+<target>I understand the syntax</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">126,129</context>
+</context-group>
+</trans-unit>
+<trans-unit id="quantificadoresFormAriaLabel" datatype="html">
+<source>Entendendo quantificadores em regex</source>
+<target>Understanding quantifiers in regex</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">150,152</context>
+</context-group>
+</trans-unit>
+<trans-unit id="quantificadoresTitle" datatype="html">
+<source>Quantificadores</source>
+<target>Quantifiers</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">153,154</context>
+</context-group>
+</trans-unit>
+<trans-unit id="quantificadoresP1" datatype="html">
+<source>Eles dizem &quot;quantas vezes&quot; um padrão se repete:</source>
+<target>They say "how many times" a pattern repeats:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">154,156</context>
+</context-group>
+</trans-unit>
+<trans-unit id="quantificadoresExampleText" datatype="html">
+<source>Exemplo:</source>
+<target>Example:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">173,174</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodQuantifiersAriaLabel" datatype="html">
+<source>Checkbox para confirmar entendimento dos quantificadores</source>
+<target>Checkbox to confirm understanding of quantifiers</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">183,185</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodQuantifiers" datatype="html">
+<source>Entendi os quantificadores</source>
+<target>I understand the quantifiers</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">185,188</context>
+</context-group>
+</trans-unit>
+<trans-unit id="geradorFormAriaLabel" datatype="html">
+<source>Usando o gerador de regex</source>
+<target>Using the regex generator</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">206,207</context>
+</context-group>
+</trans-unit>
+<trans-unit id="geradorTitle" datatype="html">
+<source>Usando o Gerador</source>
+<target>Using the Generator</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">208,209</context>
+</context-group>
+</trans-unit>
+<trans-unit id="geradorP1" datatype="html">
+<source> Agora que você conhece o básico, use a seção Gerador Guiado na tela principal para criar regex. </source>
+<target> Now that you know the basics, use the Guided Generator section on the main screen to create regex. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">210,212</context>
+</context-group>
+</trans-unit>
+<trans-unit id="geradorP2" datatype="html">
+<source> Selecione um padrão (e-mail, CPF, etc.) e veja a regex gerada, com explicações detalhadas. </source>
+<target> Select a pattern (email, CPF, etc.) and see the generated regex with detailed explanations. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">214,216</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodGeneratorAriaLabel" datatype="html">
+<source>Checkbox para confirmar entendimento do gerador</source>
+<target>Checkbox to confirm understanding of the generator</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">221,223</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodGenerator" datatype="html">
+<source>Entendi como usar o Gerador</source>
+<target>I understand how to use the Generator</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">223,226</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testadorFormAriaLabel" datatype="html">
+<source>Usando o testador de regex</source>
+<target>Using the regex tester</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">244,245</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testadorTitle" datatype="html">
+<source>Usando o Testador</source>
+<target>Using the Tester</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">246,247</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testadorP1" datatype="html">
+<source> Depois de gerar sua regex, cole qualquer texto e a ferramenta irá validar se ele corresponde ao padrão. </source>
+<target> After generating your regex, paste any text and the tool will validate whether it matches the pattern. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">248,250</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testadorP2" datatype="html">
+<source> Você verá se o texto é válido (✅) ou inválido (❌). </source>
+<target> You will see whether the text is valid (✅) or invalid (❌). </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">252,255</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodTesterAriaLabel" datatype="html">
+<source>Checkbox para confirmar entendimento do testador</source>
+<target>Checkbox to confirm understanding of the tester</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">258,260</context>
+</context-group>
+</trans-unit>
+<trans-unit id="understoodTester" datatype="html">
+<source>Entendi como usar o Testador</source>
+<target>I understand how to use the Tester</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">260,263</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaFormAriaLabel" datatype="html">
+<source>Prática com regex de e-mail</source>
+<target>Practice with email regex</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">281,282</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaTitle" datatype="html">
+<source>Prática: Validação de e-mail</source>
+<target>Practice: Email Validation</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">283,284</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaP1" datatype="html">
+<source>Tente digitar um e-mail que combine com esta regex:</source>
+<target>Try typing an email that matches this regex:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">284,285</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaP2" datatype="html">
+<source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Regex de e-mail:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/><x id="INTERPOLATION" equiv-text="{{ emailRegex }}"/><x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/></source>
+<target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email regex:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/><x id="INTERPOLATION" equiv-text="{{ emailRegex }}"/><x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/></target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">286,288</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaInputLabel" datatype="html">
+<source>Digite um e-mail válido</source>
+<target>Enter a valid email</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">289,291</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaErrorMsg" datatype="html">
+<source> Formato de e-mail inválido </source>
+<target> Invalid email format </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">303,304</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaSmallText" datatype="html">
+<source> Exemplo: <x id="INTERPOLATION" equiv-text="{{ emailExample }}"/> </source>
+<target> Example: <x id="INTERPOLATION" equiv-text="{{ emailExample }}"/> </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">307,309</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaResultCorrect" datatype="html">
+<source> Resultado: Correto ✔️ </source>
+<target> Result: Correct ✔️ </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">316,318</context>
+</context-group>
+</trans-unit>
+<trans-unit id="praticaResultWrong" datatype="html">
+<source> Resultado: Não corresponde ❌ </source>
+<target> Result: Does not match ❌ </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">320,321</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnFinishAriaLabel" datatype="html">
+<source>Finalizar guia</source>
+<target>Finish guide</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">335,337</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnFinish" datatype="html">
+<source>Finalizar</source>
+<target>Finish</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/features/regex-guide-modal/regex-guide-modal.component.html</context>
+<context context-type="linenumber">337,338</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descEmail" datatype="html">
+<source>Valida endereços de e-mail com estrutura: nome@domínio.extensão. Aceita letras, números e símbolos como ponto ou sublinhado.</source>
+<target>Validates email addresses with structure: name@domain.extension. Accepts letters, numbers and symbols like dot or underscore.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descPhone" datatype="html">
+<source>Valida telefones brasileiros com ou sem DDD e hífen. Aceita formatos como (11) 91234-5678 ou 11912345678.</source>
+<target>Validates Brazilian phone numbers with or without area code and hyphen. Accepts formats like (11) 91234-5678 or 11912345678.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCpf" datatype="html">
+<source>Verifica se o texto segue o padrão de CPF brasileiro: 000.000.000-00 ou 00000000000.</source>
+<target>Checks if the text follows the Brazilian CPF pattern: 000.000.000-00 or 00000000000.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">21</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descDate" datatype="html">
+<source>Valida datas no formato brasileiro DD/MM/AAAA, como 25/12/2025.</source>
+<target>Validates dates in the Brazilian format DD/MM/YYYY, such as 25/12/2025.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">24</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCepBrazil" datatype="html">
+<source>Valida CEPs do Brasil no formato 12345-678 ou 12345678.</source>
+<target>Validates Brazilian CEPs in the format 12345-678 or 12345678.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">29</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCepUsa" datatype="html">
+<source>Valida ZIP Codes dos EUA, como 12345 ou 12345-6789.</source>
+<target>Validates US ZIP Codes, like 12345 or 12345-6789.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">31</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCepCanada" datatype="html">
+<source>Valida códigos postais canadenses no formato A1A 1A1, com ou sem espaço.</source>
+<target>Validates Canadian postal codes in the format A1A 1A1, with or without a space.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">33</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCepUk" datatype="html">
+<source>Valida postcodes do Reino Unido como SW1A 0AA.</source>
+<target>Validates UK postcodes like SW1A 0AA.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">35</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCepGermany" datatype="html">
+<source>Valida códigos postais da Alemanha com 5 dígitos.</source>
+<target>Validates German postal codes with 5 digits.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">37</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descUrlOptional" datatype="html">
+<source>Valida URLs com ou sem protocolo (http:// ou https://), como www.site.com ou https://site.com.</source>
+<target>Validates URLs with or without protocol (http:// or https://), like www.site.com or https://site.com.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">43</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descUrlMandatory" datatype="html">
+<source>Valida URLs que exigem o protocolo (http:// ou https://), como https://site.com.</source>
+<target>Validates URLs that require the protocol (http:// or https://), like https://site.com.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">45</context>
+</context-group>
+</trans-unit>
+<trans-unit id="descCustomRegex" datatype="html">
+<source>Expressão regular personalizada. Confira a explicação técnica abaixo.</source>
+<target>Custom regular expression. Check the technical explanation below.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-description.service.ts</context>
+<context context-type="linenumber">50</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainStart" datatype="html">
+<source>Início da linha.</source>
+<target>Start of the line.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">11</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainEnd" datatype="html">
+<source>Fim da linha.</source>
+<target>End of the line.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">12</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainDigit" datatype="html">
+<source>Qualquer número (0-9).</source>
+<target>Any number (0-9).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">13</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainWord" datatype="html">
+<source>Qualquer letra, número ou sublinhado (_).</source>
+<target>Any letter, number, or underscore (_).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainWhitespace" datatype="html">
+<source>Um espaço em branco (espaço, tab, quebra de linha).</source>
+<target>A whitespace (space, tab, newline).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainDotLiteral" datatype="html">
+<source>Um ponto literal.</source>
+<target>A literal dot.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">16</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainPlusLiteral" datatype="html">
+<source>O sinal de mais literal.</source>
+<target>The literal plus sign.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">17</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainHyphenLiteral" datatype="html">
+<source>Um traço literal.</source>
+<target>A literal hyphen.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainAtLiteral" datatype="html">
+<source>O símbolo de arroba (@).</source>
+<target>The at symbol (@).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">19</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainAnyChar" datatype="html">
+<source>Qualquer caractere (exceto nova linha).</source>
+<target>Any character (except newline).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">20</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainZeroPlus" datatype="html">
+<source>0 ou mais vezes.</source>
+<target>0 or more times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">21</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainOnePlus" datatype="html">
+<source>1 ou mais vezes.</source>
+<target>1 or more times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">22</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainOptional" datatype="html">
+<source>Opcional (0 ou 1 vez).</source>
+<target>Optional (0 or 1 time).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">23</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainOR" datatype="html">
+<source>OU (alternativa entre opções).</source>
+<target>OR (alternative between options).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">24</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainCaptureGroup" datatype="html">
+<source>Grupo de captura.</source>
+<target>Capture group.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">25</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainNonCaptureGroup" datatype="html">
+<source>Grupo sem captura (só agrupamento lógico).</source>
+<target>Non-capturing group (logical grouping only).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">26</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainLookaheadPos" datatype="html">
+<source>Lookahead positivo (verifica se algo vem depois).</source>
+<target>Positive lookahead (checks if something follows).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">27</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainLookaheadNeg" datatype="html">
+<source>Lookahead negativo (verifica se algo não vem depois).</source>
+<target>Negative lookahead (checks if something does not follow).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">28</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainNamedGroup" datatype="html">
+<source>Grupo nomeado (usado em algumas engines).</source>
+<target>Named group (used in some engines).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">29</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainRepeatN" datatype="html">
+<source>Repete exatamente n vezes.</source>
+<target>Repeats exactly n times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">30</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainRepeatNPlus" datatype="html">
+<source>Repete n ou mais vezes.</source>
+<target>Repeats n or more times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">31</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainRepeatNM" datatype="html">
+<source>Repete entre n e m vezes.</source>
+<target>Repeats between n and m times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">32</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainUnderscore" datatype="html">
+<source>Um sublinhado literal.</source>
+<target>A literal underscore.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">33</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainAtSymbol" datatype="html">
+<source>O símbolo arroba (@).</source>
+<target>The at symbol (@).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">34</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainDash" datatype="html">
+<source>Um traço literal.</source>
+<target>A literal hyphen.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">35</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partLower" datatype="html">
+<source>letras minúsculas (a–z)</source>
+<target>lowercase letters (a–z)</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">57</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partUpper" datatype="html">
+<source>letras maiúsculas (A–Z)</source>
+<target>uppercase letters (A–Z)</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">58</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partNumbers" datatype="html">
+<source>números (0–9)</source>
+<target>numbers (0–9)</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">59</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partUnderscore" datatype="html">
+<source>sublinhado</source>
+<target>underscore</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">60</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partPercent" datatype="html">
+<source>porcentagem</source>
+<target>percentage</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">61</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partPlus" datatype="html">
+<source>mais</source>
+<target>plus</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">62</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partDash" datatype="html">
+<source>traço</source>
+<target>dash</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">63</context>
+</context-group>
+</trans-unit>
+<trans-unit id="partDot" datatype="html">
+<source>ponto</source>
+<target>dot</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">64</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainSetNegated" datatype="html">
+<source>Qualquer caractere exceto: <x id="PH" equiv-text="parts.join(&apos;, &apos;)"/>.</source>
+<target>Any character except: <x id="PH" equiv-text="parts.join(&apos;, &apos;)"/>.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">67</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainSetPositive" datatype="html">
+<source>Qualquer caractere entre: <x id="PH" equiv-text="parts.join(&apos;, &apos;)"/>.</source>
+<target>Any character between: <x id="PH" equiv-text="parts.join(&apos;, &apos;)"/>.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">68</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainRepeatNOrMore" datatype="html">
+<source>Repete <x id="PH" equiv-text="min"/> ou mais vezes.</source>
+<target>Repeats <x id="PH" equiv-text="min"/> or more times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">75</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainRepeatNToM" datatype="html">
+<source>Repete entre <x id="PH" equiv-text="min"/> e <x id="PH_1" equiv-text="max"/> vezes.</source>
+<target>Repeats between <x id="PH" equiv-text="min"/> and <x id="PH_1" equiv-text="max"/> times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">76</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainRepeatExactlyN" datatype="html">
+<source>Repete exatamente <x id="PH" equiv-text="content"/> vezes.</source>
+<target>Repeats exactly <x id="PH" equiv-text="content"/> times.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">78</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainEscapedChar" datatype="html">
+<source>Caractere especial escapado: <x id="PH" equiv-text="pattern.slice(1)"/></source>
+<target>Escaped special character: <x id="PH" equiv-text="pattern.slice(1)"/></target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">83</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explainFallback" datatype="html">
+<source>Este é o caractere <x id="PH" equiv-text="pattern"/>.</source>
+<target>This is the <x id="PH" equiv-text="pattern"/> character.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-explainer.service.ts</context>
+<context context-type="linenumber">87</context>
+</context-group>
+</trans-unit>
+<trans-unit id="errorInvalidRegex" datatype="html">
+<source>Sua expressão regular é inválida.</source>
+<target>Your regular expression is invalid.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/services/regex-validator.service.ts</context>
+<context context-type="linenumber">22</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fakeAdTitle" datatype="html">
+<source>🔎 Aprenda Regex com um Guia Interativo</source>
+<target>🔎 Learn Regex with an Interactive Guide</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/ad-banner/ad-banner.component.html</context>
+<context context-type="linenumber">13,14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fakeAdP1" datatype="html">
+<source>Confira um passo a passo intuitivo para dominar expressões regulares.</source>
+<target>Check out an intuitive step-by-step guide to master regular expressions.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/ad-banner/ad-banner.component.html</context>
+<context context-type="linenumber">14,15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="fakeAdLink" datatype="html">
+<source> Acessar artigo → </source>
+<target> Read article → </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/ad-banner/ad-banner.component.html</context>
+<context context-type="linenumber">16,18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingModalTitle" datatype="html">
+<source>Bem-vindo ao Regex Simples!</source>
+<target>Welcome to Simple Regex!</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">12,13</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingModalSubtitle" datatype="html">
+<source>Confira rapidamente nossas funcionalidades para começar:</source>
+<target>Quickly check out our features to get started:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">13,14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingItem1" datatype="html">
+<source>Guia Interativo de Regex: Aprenda e entenda expressões regulares de forma simples.</source>
+<target>Interactive Regex Guide: Learn and understand regular expressions simply.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">15,16</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingItem2" datatype="html">
+<source>Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</source>
+<target>Generator: Choose the type of regex you need (e.g., Email).</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">16,17</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingItem3" datatype="html">
+<source>Explicador: Entenda cada parte da regex gerada.</source>
+<target>Explainer: Understand each part of the generated regex.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">17,18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingItem4" datatype="html">
+<source>Testador: Cole um texto para ver se ele corresponde ao padrão.</source>
+<target>Tester: Paste a text to see if it matches the pattern.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">18,20</context>
+</context-group>
+</trans-unit>
+<trans-unit id="onboardingBtnClose" datatype="html">
+<source>Entendi!</source>
+<target>Got it!</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/core/shared/components/onboarding-modal/onboarding-modal.component.ts</context>
+<context context-type="linenumber">20,22</context>
+</context-group>
+</trans-unit>
+<trans-unit id="aboutTitle" datatype="html">
+<source>Sobre o Projeto</source>
+<target>About the Project</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/about/about.html</context>
+<context context-type="linenumber">3,4</context>
+</context-group>
+</trans-unit>
+<trans-unit id="aboutMission" datatype="html">
+<source>Nossa missão é tornar expressões regulares acessíveis para todos.</source>
+<target>Our mission is to make regular expressions accessible to everyone.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/about/about.html</context>
+<context context-type="linenumber">4,7</context>
+</context-group>
+</trans-unit>
+<trans-unit id="whyProjectTitle" datatype="html">
+<source>Por que este projeto?</source>
+<target>Why this project?</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/about/about.html</context>
+<context context-type="linenumber">9,10</context>
+</context-group>
+</trans-unit>
+<trans-unit id="whyProjectP1" datatype="html">
+<source> Construímos esta ferramenta com um propósito claro: simplificar a complexidade.
+Enquanto muitos sites de regex são técnicos e intimidantes, o nosso foca em guiar o usuário, explicando o significado de cada caractere.
+Acreditamos que o conhecimento é a chave, e não uma barreira. </source>
+<target> We built this tool with a clear purpose: to simplify complexity.
+While many regex sites are technical and intimidating, ours focuses on guiding the user, explaining the meaning of each character.
+We believe that knowledge is the key, not a barrier. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/about/about.html</context>
+<context context-type="linenumber">11,13</context>
+</context-group>
+</trans-unit>
+<trans-unit id="philosophyTitle" datatype="html">
+<source>Nossa Filosofia</source>
+<target>Our Philosophy</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/about/about.html</context>
+<context context-type="linenumber">16,17</context>
+</context-group>
+</trans-unit>
+<trans-unit id="philosophyP1" datatype="html">
+<source> Chega de interfaces feias e confusas! Nossa filosofia é que uma ferramenta poderosa também pode ter um design intuitivo e acolhedor.
+Cada componente, cor e espaçamento foi pensado para facilitar sua jornada de aprendizado. </source>
+<target> Enough with ugly and confusing interfaces! Our philosophy is that a powerful tool can also have an intuitive and welcoming design.
+Every component, color, and spacing was designed to ease your learning journey. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/about/about.html</context>
+<context context-type="linenumber">18,20</context>
+</context-group>
+</trans-unit>
+<trans-unit id="contactTitle" datatype="html">
+<source>Fale Conosco</source>
+<target>Contact Us</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/contact/contact.html</context>
+<context context-type="linenumber">3,4</context>
+</context-group>
+</trans-unit>
+<trans-unit id="contactSubtitle" datatype="html">
+<source>Tem alguma sugestão, crítica ou encontrou um bug? Gostaríamos de ouvir você!</source>
+<target>Have a suggestion, feedback, or found a bug? We'd love to hear from you!</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/contact/contact.html</context>
+<context context-type="linenumber">4,7</context>
+</context-group>
+</trans-unit>
+<trans-unit id="contactSendMsgTitle" datatype="html">
+<source>Envie-nos uma mensagem</source>
+<target>Send us a message</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/contact/contact.html</context>
+<context context-type="linenumber">9,10</context>
+</context-group>
+</trans-unit>
+<trans-unit id="contactSendMsgP1" datatype="html">
+<source> A forma mais fácil de entrar em contato é por e-mail. Nossa equipe responde o mais rápido possível. </source>
+<target> The easiest way to get in touch is by email. Our team responds as quickly as possible. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/contact/contact.html</context>
+<context context-type="linenumber">11,13</context>
+</context-group>
+</trans-unit>
+<trans-unit id="generatorSectionTitle" datatype="html">
+<source>1. Gerador Guiado</source>
+<target>1. Guided Generator</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">8,9</context>
+</context-group>
+</trans-unit>
+<trans-unit id="generatorSubtitle" datatype="html">
+<source>Escolha um padrão para gerar a sua regex.</source>
+<target>Choose a pattern to generate your regex.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">9,10</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnEmail" datatype="html">
+<source>E-mail</source>
+<target>Email</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">13,14</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnPhone" datatype="html">
+<source>Telefone</source>
+<target>Phone</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">17,18</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnCPF" datatype="html">
+<source>CPF</source>
+<target>CPF</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">21,22</context>
+</context-group>
+</trans-unit>
+<trans-unit id="btnDate" datatype="html">
+<source>Data</source>
+<target>Date</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">25,26</context>
+</context-group>
+</trans-unit>
+<trans-unit id="labelURL" datatype="html">
+<source>URL:</source>
+<target>URL:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">33,35</context>
+</context-group>
+</trans-unit>
+<trans-unit id="optionChoose" datatype="html">
+<source>Escolha uma opção</source>
+<target>Choose an option</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">41,42</context>
+</context-group>
+</trans-unit>
+<trans-unit id="urlOption; select(category)" datatype="html">
+<source><x id="INTERPOLATION" equiv-text="{{ category === &apos;optional&apos; ? &apos;HTTPS:// Opcional&apos; : &apos;HTTPS:// Obrigatória&apos; }}"/></source>
+<target><x id="INTERPOLATION" equiv-text="{{ category === &apos;optional&apos; ? &apos;HTTPS:// Optional&apos; : &apos;HTTPS:// Required&apos; }}"/></target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">45,46</context>
+</context-group>
+</trans-unit>
+<trans-unit id="labelPostalCode" datatype="html">
+<source>Código Postal:</source>
+<target>Postal Code:</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">56,58</context>
+</context-group>
+</trans-unit>
+<trans-unit id="optionChooseCountry" datatype="html">
+<source>Escolha um país</source>
+<target>Choose a country</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">64,66</context>
+</context-group>
+</trans-unit>
+<trans-unit id="regexGeneratedTitle" datatype="html">
+<source>2. Regex Gerada</source>
+<target>2. Generated Regex</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">77,78</context>
+</context-group>
+</trans-unit>
+<trans-unit id="explanationTitle" datatype="html">
+<source>Explicação</source>
+<target>Explanation</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">80,81</context>
+</context-group>
+</trans-unit>
+<trans-unit id="intuitiveDescriptionTitle" datatype="html">
+<source>Descrição Intuitiva</source>
+<target>Intuitive Description</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">90,91</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testerTitle" datatype="html">
+<source>3. Testador</source>
+<target>3. Tester</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">95,96</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testerSubtitle" datatype="html">
+<source>Cole o texto que você quer testar.</source>
+<target>Paste the text you want to test.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">96,98</context>
+</context-group>
+</trans-unit>
+<trans-unit id="testerPlaceholder" datatype="html">
+<source>Cole seu texto aqui...</source>
+<target>Paste your text here...</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/home/home.html</context>
+<context context-type="linenumber">101,103</context>
+</context-group>
+</trans-unit>
+<trans-unit id="privacyTitle" datatype="html">
+<source>Política de Privacidade</source>
+<target>Privacy Policy</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">2,4</context>
+</context-group>
+</trans-unit>
+<trans-unit id="privacyIntro" datatype="html">
+<source> Esta Política de Privacidade descreve como o aplicativo Regex Simples (&quot;Nós&quot;, &quot;Nosso&quot;) lida com suas informações.
+Nossa prioridade é a sua privacidade. </source>
+<target> This Privacy Policy describes how the Simple Regex application ("We", "Our") handles your information. Our priority is your privacy.
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">5,9</context>
+</context-group>
+</trans-unit>
+<trans-unit id="section1Title" datatype="html">
+<source>1. Coleta e Uso de Informações</source>
+<target>1. Collection and Use of Information</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">9,10</context>
+</context-group>
+</trans-unit>
+<trans-unit id="section1P1" datatype="html">
+<source> O Regex Simples é uma ferramenta de uso local e não coleta nem armazena quaisquer dados pessoais identificáveis (como nome, endereço de email ou localização) de nossos usuários.
+</source>
+<target> Simple Regex is a local-use tool and does not collect or store any personally identifiable information (such as name, email address, or location) from our users.
+</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">11,15</context>
+</context-group>
+</trans-unit>
+<trans-unit id="subsection1_1Title" datatype="html">
+<source>1.1. Dados Gerados pelo Usuário</source>
+<target>1.1. User-Generated Data</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">16,17</context>
+</context-group>
+</trans-unit>
+<trans-unit id="subsection1_1P1" datatype="html">
+<source> Todo o texto de entrada (strings, exemplos) e as expressões regulares geradas são processados localmente no seu navegador.
+Esses dados nunca são transmitidos ou armazenados em nossos servidores. Ao fechar a aplicação, a informação é descartada. </source>
+<target> All input text (strings, examples) and generated regular expressions are processed locally in your browser.
+This data is never transmitted or stored on our servers. When the application is closed, the information is discarded. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">18,23</context>
+</context-group>
+</trans-unit>
+<trans-unit id="section2Title" datatype="html">
+<source>2. Uso de Cookies e Tecnologias de Rastreamento</source>
+<target>2. Use of Cookies and Tracking Technologies</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">24,25</context>
+</context-group>
+</trans-unit>
+<trans-unit id="section2P1" datatype="html">
+<source> Este aplicativo não utiliza cookies ou tecnologias de rastreamento de terceiros para fins de coleta de dados pessoais ou marketing.
+</source>
+<target> This application does not use third-party cookies or tracking technologies for collecting personal data or marketing purposes. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">26,30</context>
+</context-group>
+</trans-unit>
+<trans-unit id="subsection2_1Title" datatype="html">
+<source>2.1. Google AdSense (Se Aplicável)</source>
+<target>2.1. Google AdSense (If Applicable)</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">30,31</context>
+</context-group>
+</trans-unit>
+<trans-unit id="subsection2_1P1" datatype="html">
+<source> Se o aplicativo exibir anúncios do Google AdSense, o AdSense pode usar cookies para veiculação de anúncios.
+Esta coleta de dados é regida pela própria Política de Privacidade do Google.
+Recomendamos que você leia a <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;googlePolicyUrl&quot; target=&quot;_blank&quot; class=&quot;text-link&quot;&gt;"/>...<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> para obter mais informações. </source>
+<target> If the application displays Google AdSense ads, AdSense may use cookies to serve ads.
+This data collection is governed by Google's own Privacy Policy.
+We recommend that you read the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;googlePolicyUrl&quot; target=&quot;_blank&quot; class=&quot;text-link&quot;&gt;"/>...<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> for more information. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">32,38</context>
+</context-group>
+</trans-unit>
+<trans-unit id="section3Title" datatype="html">
+<source>3. Alterações a Esta Política</source>
+<target>3. Changes to This Policy</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">39,40</context>
+</context-group>
+</trans-unit>
+<trans-unit id="section3P1" datatype="html">
+<source> Podemos atualizar nossa Política de Privacidade ocasionalmente. Quaisquer alterações entrarão em vigor imediatamente após a publicação nesta página.
+Recomendamos que você revise esta Política periodicamente. </source>
+<target> We may update our Privacy Policy from time to time. Any changes will take effect immediately after being posted on this page.
+We recommend that you review this Policy periodically. </target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">41,45</context>
+</context-group>
+</trans-unit>
+<trans-unit id="dateUpdated" datatype="html">
+<source>Última atualização: Outubro de 2025.</source>
+<target>Last updated: October 2025.</target>
+<context-group purpose="location">
+<context context-type="sourcefile">src/app/pages/privacy-policy/privacy-policy.html</context>
+<context context-type="linenumber">46,47</context>
+</context-group>
+</trans-unit>
+</body>
+</file>
+</xliff>

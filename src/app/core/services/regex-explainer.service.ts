@@ -25,11 +25,11 @@ export class RegexExplainerService {
     '()': $localize`:@@explainCaptureGroup:Grupo de captura.`,
     '(?:': $localize`:@@explainNonCaptureGroup:Grupo sem captura (só agrupamento lógico).`,
     '(?=': $localize`:@@explainLookaheadPos:Lookahead positivo (verifica se algo vem depois).`,
-    '(?!': $localize`:@@explainLookaheadNeg:Lookahead negativo (verifica se algo **não** vem depois).`,
+    '(?!': $localize`:@@explainLookaheadNeg:Lookahead negativo (verifica se algo não vem depois).`,
     '(?P<': $localize`:@@explainNamedGroup:Grupo nomeado (usado em algumas engines).`,
-    '{n}': $localize`:@@explainRepeatN:Repete exatamente **n** vezes.`,
-    '{n,}': $localize`:@@explainRepeatNPlus:Repete **n ou mais** vezes.`,
-    '{n,m}': $localize`:@@explainRepeatNM:Repete entre **n e m** vezes.`,
+    '{n}': $localize`:@@explainRepeatN:Repete exatamente n vezes.`,
+    '{n,}': $localize`:@@explainRepeatNPlus:Repete n ou mais vezes.`,
+    '{n,m}': $localize`:@@explainRepeatNM:Repete entre n e m vezes.`,
     '_': $localize`:@@explainUnderscore:Um sublinhado literal.`,
     '@': $localize`:@@explainAtSymbol:O símbolo arroba (@).`,
     '-': $localize`:@@explainDash:Um traço literal.`
@@ -64,7 +64,7 @@ export class RegexExplainerService {
         if (content.includes('.')) parts.push($localize`:@@partDot:ponto`);
 
         explanation = isNegated
-          ? $localize`:@@explainSetNegated:Qualquer caractere **exceto**: ${parts.join(', ')}.`
+          ? $localize`:@@explainSetNegated:Qualquer caractere exceto: ${parts.join(', ')}.`
           : $localize`:@@explainSetPositive:Qualquer caractere entre: ${parts.join(', ')}.`;
       }
 
@@ -72,19 +72,19 @@ export class RegexExplainerService {
         const content = pattern.slice(1, -1);
         if (content.includes(',')) {
           const [min, max] = content.split(',');
-          if (!max) explanation = $localize`:@@explainRepeatNOrMore:Repete **${min} ou mais vezes**.`;
-          else explanation = $localize`:@@explainRepeatNToM:Repete **entre ${min} e ${max} vezes**.`;
+          if (!max) explanation = $localize`:@@explainRepeatNOrMore:Repete ${min} ou mais vezes.`;
+          else explanation = $localize`:@@explainRepeatNToM:Repete entre ${min} e ${max} vezes.`;
         } else {
-          explanation = $localize`:@@explainRepeatExactlyN:Repete **exatamente ${content} vezes**.`;
+          explanation = $localize`:@@explainRepeatExactlyN:Repete exatamente ${content} vezes.`;
         }
       }
 
       else if (!explanation && pattern.startsWith('\\')) {
-        explanation = $localize`:@@explainEscapedChar:Caractere **especial escapado**: ${pattern.slice(1)}`;
+        explanation = $localize`:@@explainEscapedChar:Caractere especial escapado: ${pattern.slice(1)}`;
       }
 
       else if (!explanation) {
-        explanation = $localize`:@@explainFallback:Este é o caractere **${pattern}**.`;
+        explanation = $localize`:@@explainFallback:Este é o caractere ${pattern}.`;
       }
 
       tokens.push({ pattern, explanation });
