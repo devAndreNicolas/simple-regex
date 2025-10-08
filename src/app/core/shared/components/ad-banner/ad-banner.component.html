@@ -1,20 +1,18 @@
 <div class="ad-container">
-  <!-- Real AdSense -->
   <ng-container *ngIf="mode === 'real'; else fakeAd">
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
   </ng-container>
 
-  <!-- Fake Ad (nativo, bonito, não invasivo) -->
   <ng-template #fakeAd>
     <div class="fake-native-ad">
-      <h4>🔎 Aprenda Regex com um Guia Interativo</h4>
-      <p>Confira um passo a passo intuitivo para dominar expressões regulares.</p>
-      <a (click)="openRegexGuide(); $event.preventDefault()">
+      <h4 i18n="@@fakeAdTitle">🔎 Aprenda Regex com um Guia Interativo</h4>
+      <p i18n="@@fakeAdP1">Confira um passo a passo intuitivo para dominar expressões regulares.</p>
+      <a (click)="openRegexGuide(); $event.preventDefault()" i18n="@@fakeAdLink">
         Acessar artigo →
       </a>
     </div>

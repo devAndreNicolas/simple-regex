@@ -1,28 +1,28 @@
 <div class="container">
 <header class="app-header">
-  <div class="header-container">
-    <div class="brand-logo">
-      <h1><a routerLink="/">Regex Simples</a></h1>
-      <p>Ferramenta para iniciantes em Expressões Regulares.</p>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a routerLink="/">Início</a></li>
-        <li><a routerLink="/sobre">Sobre</a></li>
-        <li><a routerLink="/contato">Contato</a></li>
-        <li><a routerLink="/politica-de-privacidade">Política de Privacidade</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div class="header-container">
+    <div class="brand-logo">
+      <h1 i18n="@@headerBrandName"><a routerLink="/">Regex Simples</a></h1>
+      <p i18n="@@headerBrandSlogan">Ferramenta para iniciantes em Expressões Regulares.</p>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a routerLink="/" i18n="@@navHome">Início</a></li>
+        <li><a routerLink="/sobre" i18n="@@navAbout">Sobre</a></li>
+        <li><a routerLink="/contato" i18n="@@navContact">Contato</a></li>
+        <li><a routerLink="/politica-de-privacidade" i18n="@@navPrivacy">Política de Privacidade</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-  
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+  
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Regex Simples. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  <footer>
+    <div class="container">
+      <p i18n="@@footerCopyright">&copy; 2025 Regex Simples. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 </div>

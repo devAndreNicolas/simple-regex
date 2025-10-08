@@ -1,23 +1,23 @@
 <mat-horizontal-stepper linear #stepper>
-  <!-- Passo 1: Introdução -->
   <mat-step [stepControl]="introForm">
-    <form [formGroup]="introForm" aria-label="Introdução ao guia de regex">
+    <form [formGroup]="introForm" i18n-aria-label="@@introFormAriaLabel" aria-label="Introdução ao guia de regex">
       <ng-template matStepLabel></ng-template>
-      <h2>Bem-vindo ao Guia Interativo de Regex</h2>
-      <p>
+      
+      <h2 i18n="@@introTitle">Bem-vindo ao Guia Interativo de Regex</h2>
+      <p i18n="@@introP1">
         Este guia vai te ajudar a aprender o básico de Expressões Regulares
         (Regex), uma ferramenta poderosa para validar e manipular textos.
       </p>
-      <p>Vamos começar?</p>
+      <p i18n="@@introP2">Vamos começar?</p>
 
-      <!-- Quiz simples -->
-      <p><strong>Você já usou Regex antes?</strong></p>
+      <p i18n="@@quizTitle"><strong>Você já usou Regex antes?</strong></p>
       <mat-radio-group
         formControlName="usedRegex"
+        i18n-aria-label="@@quizAriaLabel"
         aria-label="Quiz: você já usou Regex antes?"
       >
-        <mat-radio-button value="sim">Sim</mat-radio-button>
-        <mat-radio-button value="não">Não</mat-radio-button>
+        <mat-radio-button i18n="@@radioSim" value="sim">Sim</mat-radio-button>
+        <mat-radio-button i18n="@@radioNao" value="não">Não</mat-radio-button>
       </mat-radio-group>
 
       <div class="step-buttons">
@@ -25,20 +25,20 @@
           mat-button
           matStepperNext
           [disabled]="!introForm.valid"
+          i18n-aria-label="@@btnNextAriaLabel"
           aria-label="Próximo passo"
         >
-          Próximo
+          <span i18n="@@btnNext">Próximo</span>
         </button>
       </div>
     </form>
   </mat-step>
 
-  <!-- Passo 2: O que é Regex? -->
   <mat-step [stepControl]="oQueEForm">
-    <form [formGroup]="oQueEForm" aria-label="O que é Regex?">
+    <form [formGroup]="oQueEForm" i18n-aria-label="@@oQueEFormAriaLabel" aria-label="O que é Regex?">
       <ng-template matStepLabel></ng-template>
-      <h2>O que é uma Expressão Regular?</h2>
-      <p>
+      <h2 i18n="@@oQueETitle">O que é uma Expressão Regular?</h2>
+      <p i18n="@@oQueEP1">
         Pense em Regex como um "super-poder" para encontrar e manipular textos.
         É um padrão que você cria para "caçar" informações em frases, documentos
         ou códigos.
@@ -47,49 +47,52 @@
       <div class="visual-explanation">
         <div class="circle-card">
           <span class="icon">📧</span>
-          <p>Validar e-mails</p>
+          <p i18n="@@cardEmail">Validar e-mails</p>
         </div>
         <div class="circle-card">
           <span class="icon">📞</span>
-          <p>Encontrar telefones</p>
+          <p i18n="@@cardPhone">Encontrar telefones</p>
         </div>
         <div class="circle-card">
           <span class="icon">🔍</span>
-          <p>Procurar palavras</p>
+          <p i18n="@@cardSearch">Procurar palavras</p>
         </div>
       </div>
 
       <mat-checkbox
         formControlName="understoodConcept"
+        i18n-aria-label="@@understoodConceptAriaLabel"
         aria-label="Checkbox para confirmar entendimento do conceito"
+        i18n="@@understoodConcept"
         >Entendi a ideia</mat-checkbox
       >
 
       <div class="step-buttons">
-        <button mat-button matStepperPrevious aria-label="Voltar passo">
-          Voltar
+        <button mat-button matStepperPrevious i18n-aria-label="@@btnBackAriaLabel" aria-label="Voltar passo">
+          <span i18n="@@btnBack">Voltar</span>
         </button>
         <button
           mat-button
           matStepperNext
           [disabled]="!oQueEForm.valid"
+          i18n-aria-label="@@btnNextAriaLabel"
           aria-label="Próximo passo"
         >
-          Próximo
+          <span i18n="@@btnNext">Próximo</span>
         </button>
       </div>
     </form>
   </mat-step>
 
-  <!-- Passo 3: Lendo Regex (Sintaxe Básica) -->
   <mat-step [stepControl]="lendoRegexForm">
     <form
       [formGroup]="lendoRegexForm"
+      i18n-aria-label="@@lendoRegexFormAriaLabel"
       aria-label="Lendo a sintaxe básica de regex"
     >
       <ng-template matStepLabel></ng-template>
-      <h2>O Alfabeto da Regex</h2>
-      <p>Aprenda o significado dos caracteres mais comuns:</p>
+      <h2 i18n="@@lendoRegexTitle">O Alfabeto da Regex</h2>
+      <p i18n="@@lendoRegexP1">Aprenda o significado dos caracteres mais comuns:</p>
 
       <div class="guide-grid">
         <div
@@ -108,7 +111,7 @@
 
           <div class="card-content">
             <div class="example-box">
-              <p>Exemplo:</p>
+              <p i18n="@@lendoRegexExampleText">Exemplo:</p>
               <div class="example-text" [innerHTML]="item.example"></div>
             </div>
           </div>
@@ -117,35 +120,38 @@
 
       <mat-checkbox
         formControlName="understoodReading"
+        i18n-aria-label="@@understoodReadingAriaLabel"
         aria-label="Checkbox para confirmar entendimento da sintaxe"
+        i18n="@@understoodReading"
         >Entendi a sintaxe</mat-checkbox
       >
 
       <div class="step-buttons">
-        <button mat-button matStepperPrevious aria-label="Voltar passo">
-          Voltar
+        <button mat-button matStepperPrevious i18n-aria-label="@@btnBackAriaLabel" aria-label="Voltar passo">
+          <span i18n="@@btnBack">Voltar</span>
         </button>
         <button
           mat-button
           matStepperNext
           [disabled]="!lendoRegexForm.valid"
+          i18n-aria-label="@@btnNextAriaLabel"
           aria-label="Próximo passo"
         >
-          Próximo
+          <span i18n="@@btnNext">Próximo</span>
         </button>
       </div>
     </form>
   </mat-step>
 
-  <!-- Passo 4: Quantificadores -->
   <mat-step [stepControl]="quantificadoresForm">
     <form
       [formGroup]="quantificadoresForm"
+      i18n-aria-label="@@quantificadoresFormAriaLabel"
       aria-label="Entendendo quantificadores em regex"
     >
       <ng-template matStepLabel></ng-template>
-      <h2>Quantificadores</h2>
-      <p>Eles dizem "quantas vezes" um padrão se repete:</p>
+      <h2 i18n="@@quantificadoresTitle">Quantificadores</h2>
+      <p i18n="@@quantificadoresP1">Eles dizem "quantas vezes" um padrão se repete:</p>
 
       <div class="guide-grid">
         <div
@@ -164,7 +170,7 @@
 
           <div class="card-content">
             <div class="example-box">
-              <p>Exemplo:</p>
+              <p i18n="@@quantificadoresExampleText">Exemplo:</p>
               <div class="example-text" [innerHTML]="item.example"></div>
             </div>
           </div>
@@ -173,108 +179,114 @@
 
       <mat-checkbox
         formControlName="understoodQuantifiers"
+        i18n-aria-label="@@understoodQuantifiersAriaLabel"
         aria-label="Checkbox para confirmar entendimento dos quantificadores"
+        i18n="@@understoodQuantifiers"
         >Entendi os quantificadores</mat-checkbox
       >
 
       <div class="step-buttons">
-        <button mat-button matStepperPrevious aria-label="Voltar passo">
-          Voltar
+        <button mat-button matStepperPrevious i18n-aria-label="@@btnBackAriaLabel" aria-label="Voltar passo">
+          <span i18n="@@btnBack">Voltar</span>
         </button>
         <button
           mat-button
           matStepperNext
           [disabled]="!quantificadoresForm.valid"
+          i18n-aria-label="@@btnNextAriaLabel"
           aria-label="Próximo passo"
         >
-          Próximo
+          <span i18n="@@btnNext">Próximo</span>
         </button>
       </div>
     </form>
   </mat-step>
 
-  <!-- Passo 5: O Gerador -->
   <mat-step [stepControl]="geradorForm">
-    <form [formGroup]="geradorForm" aria-label="Usando o gerador de regex">
+    <form [formGroup]="geradorForm" i18n-aria-label="@@geradorFormAriaLabel" aria-label="Usando o gerador de regex">
       <ng-template matStepLabel></ng-template>
-      <h2>Usando o Gerador</h2>
-      <p>
+      <h2 i18n="@@geradorTitle">Usando o Gerador</h2>
+      <p i18n="@@geradorP1">
         Agora que você conhece o básico, use a seção Gerador Guiado na tela
         principal para criar regex.
       </p>
-      <p>
+      <p i18n="@@geradorP2">
         Selecione um padrão (e-mail, CPF, etc.) e veja a regex gerada, com
         explicações detalhadas.
       </p>
 
       <mat-checkbox
         formControlName="understoodGenerator"
+        i18n-aria-label="@@understoodGeneratorAriaLabel"
         aria-label="Checkbox para confirmar entendimento do gerador"
+        i18n="@@understoodGenerator"
         >Entendi como usar o Gerador</mat-checkbox
       >
 
       <div class="step-buttons">
-        <button mat-button matStepperPrevious aria-label="Voltar passo">
-          Voltar
+        <button mat-button matStepperPrevious i18n-aria-label="@@btnBackAriaLabel" aria-label="Voltar passo">
+          <span i18n="@@btnBack">Voltar</span>
         </button>
         <button
           mat-button
           matStepperNext
           [disabled]="!geradorForm.valid"
+          i18n-aria-label="@@btnNextAriaLabel"
           aria-label="Próximo passo"
         >
-          Próximo
+          <span i18n="@@btnNext">Próximo</span>
         </button>
       </div>
     </form>
   </mat-step>
 
-  <!-- Passo 6: O Testador -->
   <mat-step [stepControl]="testadorForm">
-    <form [formGroup]="testadorForm" aria-label="Usando o testador de regex">
+    <form [formGroup]="testadorForm" i18n-aria-label="@@testadorFormAriaLabel" aria-label="Usando o testador de regex">
       <ng-template matStepLabel></ng-template>
-      <h2>Usando o Testador</h2>
-      <p>
+      <h2 i18n="@@testadorTitle">Usando o Testador</h2>
+      <p i18n="@@testadorP1">
         Depois de gerar sua regex, cole qualquer texto e a ferramenta irá
         validar se ele corresponde ao padrão.
       </p>
-      <p>
+      <p i18n="@@testadorP2">
         Você verá se o texto é válido (✅) ou inválido (❌).
       </p>
 
       <mat-checkbox
         formControlName="understoodTester"
+        i18n-aria-label="@@understoodTesterAriaLabel"
         aria-label="Checkbox para confirmar entendimento do testador"
+        i18n="@@understoodTester"
         >Entendi como usar o Testador</mat-checkbox
       >
 
       <div class="step-buttons">
-        <button mat-button matStepperPrevious aria-label="Voltar passo">
-          Voltar
+        <button mat-button matStepperPrevious i18n-aria-label="@@btnBackAriaLabel" aria-label="Voltar passo">
+          <span i18n="@@btnBack">Voltar</span>
         </button>
         <button
           mat-button
           matStepperNext
           [disabled]="!testadorForm.valid"
+          i18n-aria-label="@@btnNextAriaLabel"
           aria-label="Próximo passo"
         >
-          Próximo
+          <span i18n="@@btnNext">Próximo</span>
         </button>
       </div>
     </form>
   </mat-step>
 
-  <!-- Passo 7: Prática -->
   <mat-step [stepControl]="praticaForm">
-    <form [formGroup]="praticaForm" aria-label="Prática com regex de e-mail">
+    <form [formGroup]="praticaForm" i18n-aria-label="@@praticaFormAriaLabel" aria-label="Prática com regex de e-mail">
       <ng-template matStepLabel></ng-template>
-      <h2>Prática: Validação de e-mail</h2>
-      <p>Tente digitar um e-mail que combine com esta regex:</p>
-      <p>
+      <h2 i18n="@@praticaTitle">Prática: Validação de e-mail</h2>
+      <p i18n="@@praticaP1">Tente digitar um e-mail que combine com esta regex:</p>
+      <p i18n="@@praticaP2">
         <strong>Regex de e-mail:</strong> <code>{{ emailRegex }}</code>
       </p>
       <mat-form-field appearance="fill">
-        <mat-label>Digite um e-mail válido</mat-label>
+        <mat-label i18n="@@praticaInputLabel">Digite um e-mail válido</mat-label>
         <input
           matInput
           formControlName="practiceAnswer"
@@ -286,35 +298,43 @@
             praticaForm.get('practiceAnswer')?.invalid &&
             praticaForm.get('practiceAnswer')?.touched
           "
+          i18n="@@praticaErrorMsg"
         >
           Formato de e-mail inválido
         </mat-error>
       </mat-form-field>
-      <small id="emailHelp" class="email-help-text"
-        >Exemplo: {{ emailExample }}</small
-      >
+      <small id="emailHelp" class="email-help-text" i18n="@@praticaSmallText">
+        Exemplo: {{ emailExample }}
+      </small>
 
       <div class="feedback" aria-live="polite" style="margin-top: 1em">
         <span *ngIf="praticaForm.valid">
-          Resultado:
-          <strong *ngIf="checkPractice(); else wrong">Correto ✔️</strong>
+          <strong
+            *ngIf="checkPractice(); else wrong"
+            i18n="@@praticaResultCorrect"
+          >
+            Resultado: Correto ✔️
+          </strong>
           <ng-template #wrong>
-            <span style="color: red">Não corresponde ❌</span>
+            <span style="color: red" i18n="@@praticaResultWrong">
+              Resultado: Não corresponde ❌
+            </span>
           </ng-template>
         </span>
       </div>
 
       <div class="step-buttons">
-        <button mat-button matStepperPrevious aria-label="Voltar passo">
-          Voltar
+        <button mat-button matStepperPrevious i18n-aria-label="@@btnBackAriaLabel" aria-label="Voltar passo">
+          <span i18n="@@btnBack">Voltar</span>
         </button>
         <button
           mat-button
           (click)="closeModal()"
           [disabled]="!checkPractice()"
+          i18n-aria-label="@@btnFinishAriaLabel"
           aria-label="Finalizar guia"
         >
-          Finalizar
+          <span i18n="@@btnFinish">Finalizar</span>
         </button>
       </div>
     </form>

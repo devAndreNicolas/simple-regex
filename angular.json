@@ -13,6 +13,19 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "pt-BR",
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          },
+          "pt": {
+            "translation": "src/locale/messages.xlf",
+            "baseHref": "/"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -39,6 +52,10 @@
           },
           "configurations": {
             "production": {
+              "localize": [
+                "pt",
+                "en"
+              ],
               "budgets": [
                 {
                   "type": "initial",

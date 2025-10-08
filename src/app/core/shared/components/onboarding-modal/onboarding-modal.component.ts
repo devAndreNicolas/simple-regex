@@ -7,19 +7,19 @@ import { LucideAngularModule } from 'lucide-angular';
   standalone: true,
   imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="modal-overlay" (click)="closeModal()">
-      <div class="modal-content" (click)="$event.stopPropagation()">
-        <h2>Bem-vindo ao Regex Simples!</h2>
-        <p>Confira rapidamente nossas funcionalidades para começar:</p>
-        <ol class="modal-list">
-          <li>Guia Interativo de Regex: Aprenda e entenda expressões regulares de forma simples.</li>
-          <li>Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
-          <li>Explicador: Entenda cada parte da regex gerada.</li>
-          <li>Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
-        </ol>
-        <button class="btn btn-primary" (click)="closeModal()">Entendi!</button>
-      </div>
-    </div>
+    <div class="modal-overlay" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <h2 i18n="@@onboardingModalTitle">Bem-vindo ao Regex Simples!</h2>
+        <p i18n="@@onboardingModalSubtitle">Confira rapidamente nossas funcionalidades para começar:</p>
+        <ol class="modal-list">
+          <li i18n="@@onboardingItem1">Guia Interativo de Regex: Aprenda e entenda expressões regulares de forma simples.</li>
+          <li i18n="@@onboardingItem2">Gerador: Escolha o tipo de regex que precisa (ex: E-mail).</li>
+          <li i18n="@@onboardingItem3">Explicador: Entenda cada parte da regex gerada.</li>
+          <li i18n="@@onboardingItem4">Testador: Cole um texto para ver se ele corresponde ao padrão.</li>
+        </ol>
+        <button class="btn btn-primary" (click)="closeModal()" i18n="@@onboardingBtnClose">Entendi!</button>
+      </div>
+    </div>
   `,
   styleUrls: ['./onboarding-modal.component.scss']
 })
