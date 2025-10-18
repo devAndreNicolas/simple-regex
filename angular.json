@@ -71,7 +71,6 @@
               ],
               "outputHashing": "all",
               "assets": [
-                "src/favicon.ico",
                 "src/assets",
                 {
                   "glob": "**/*",
