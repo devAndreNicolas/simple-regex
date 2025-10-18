@@ -1,1 +1,2 @@
-/* /index.html 200
+/ /pt-BR 302
+/:locale/* /:locale/index.html 200
