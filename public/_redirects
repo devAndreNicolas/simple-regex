@@ -1,2 +1,3 @@
 / /pt-BR 302
+/favicon.ico /pt-BR/favicon.ico 200
 /:locale/* /:locale/index.html 200
