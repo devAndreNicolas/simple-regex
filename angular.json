@@ -19,10 +19,6 @@
           "en": {
             "translation": "src/locale/messages.en.xlf",
             "baseHref": "/"
-          },
-          "pt": {
-            "translation": "src/locale/messages.xlf",
-            "baseHref": "/"
           }
         }
       },
@@ -53,8 +49,7 @@
           },
           "configurations": {
             "production": {
-              "localize": [
-                "pt",
+              "localize": [ 
                 "en"
               ],
               "budgets": [
@@ -104,9 +99,6 @@
             },
             "en": {
                 "buildTarget": "regex-generator-app:build:development,en"
-            },
-            "pt": {
-                "buildTarget": "regex-generator-app:build:development,pt"
             }
           },
           "defaultConfiguration": "development"
