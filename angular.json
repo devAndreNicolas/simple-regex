@@ -50,6 +50,9 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
               "localize": [ 
                 "en"
               ],
@@ -66,15 +69,15 @@
                 }
               ],
               "outputHashing": "all",
-"assets": [
-  "src/favicon.ico",
-  "src/assets",
-  {
-    "glob": "**/*",
-    "input": "public",
-    "output": "/"
-  }
-]
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "public",
+                  "output": "/"
+                }
+              ]
             },
             "development": {
               "optimization": false,

@@ -1,3 +1,6 @@
-/ /pt-BR 302
+/ /pt-BR/ 302
+/pt-BR /pt-BR/ 302
+/en /en/ 302
 /favicon.ico /pt-BR/favicon.ico 200
-/:locale/* /:locale/index.html 200
+/pt-BR/* /pt-BR/index.html 200
+/en/* /en/index.html 200
