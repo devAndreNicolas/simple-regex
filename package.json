@@ -9,7 +9,8 @@
     "build:i18n": "ng build --localize",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs"
+    "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs",
+    "postbuild": "cp public/_redirects dist/regex-generator-app/browser/"
   },
   "dependencies": {
     "@angular/animations": "^20.3.0",

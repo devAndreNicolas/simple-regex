@@ -14,11 +14,14 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "pt-BR",
+        "sourceLocale": {
+          "code": "pt-BR",
+          "baseHref": "/pt-BR/"
+        },
         "locales": {
           "en": {
             "translation": "src/locale/messages.en.xlf",
-            "baseHref": "/"
+            "baseHref": "/en/"
           }
         }
       },
@@ -49,7 +52,7 @@
           },
           "configurations": {
             "production": {
-              "localize": [ 
+              "localize": [
                 "en"
               ],
               "budgets": [
@@ -83,7 +86,9 @@
               ]
             },
             "en": {
-              "localize": ["en"]
+              "localize": [
+                "en"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -98,7 +103,7 @@
               "buildTarget": "regex-generator-app:build:development"
             },
             "en": {
-                "buildTarget": "regex-generator-app:build:development,en"
+              "buildTarget": "regex-generator-app:build:development,en"
             }
           },
           "defaultConfiguration": "development"
