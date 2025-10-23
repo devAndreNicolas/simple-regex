@@ -5,34 +5,33 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
-import path, { dirname, join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 const browserDistFolder = join(dirname(fileURLToPath(import.meta.url)), '../browser');
 
+// --- INÍCIO DA CORREÇÃO ---
+app.use((req, res, next) => {
+  if (req.originalUrl === '/') {
+    return res.redirect(301, '/pt-BR/');
+  }
+  next();
+});
+// --- FIM DA CORREÇÃO ---
+
+
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/{*splat}', (req, res) => {
- *   // Handle API request
- * });
- * ```
  */
 
 /**
  * Serve static files from /browser
  */
-
-app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(path.join(__dirname, 'assets', 'sitemap.xml'));
-});
-
-app.use(
+app.get(
+  '*.*', // Esta rota captura requisições para arquivos com extensão (ex: .js, .css, .ico)
   express.static(browserDistFolder, {
     maxAge: '1y',
     index: false,
@@ -58,7 +57,7 @@ app.use((req, res, next) => {
  */
 if (isMainModule(import.meta.url)) {
   const port = process.env['PORT'] || 4000;
-  app.listen(port, (error) => {
+  app.listen(port, (error?: unknown) => {
     if (error) {
       throw error;
     }

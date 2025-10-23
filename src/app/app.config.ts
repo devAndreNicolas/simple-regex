@@ -5,6 +5,10 @@ import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { AlertCircle, CalendarDays, CheckCircle, Copy, CreditCard, Globe, Info, LucideAngularModule, Mail, MapPin, Phone, XCircle } from 'lucide-angular';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
 
 export const appConfig: ApplicationConfig = {
   providers: [

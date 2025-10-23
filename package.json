@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "node dist/regex-generator-app/server/server.mjs",
     "build": "ng build",
-    "build:i18n": "ng build --localize",
+    "build:i18n": "ng build --localize && cp public/_redirects dist/regex-generator-app/browser/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs",
