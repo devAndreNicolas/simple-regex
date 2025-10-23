@@ -6,11 +6,10 @@
     "ng": "ng",
     "start": "node dist/regex-generator-app/server/server.mjs",
     "build": "ng build",
-    "build:i18n": "ng build --localize && cp public/_redirects dist/regex-generator-app/browser/",
+    "build:i18n": "ng build --localize && node src/scripts/copy-assets.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs",
-    "postbuild": "cp public/_redirects dist/regex-generator-app/browser/"
+    "serve:ssr:regex-generator-app": "node dist/regex-generator-app/server/server.mjs"    
   },
   "dependencies": {
     "@angular/animations": "^20.3.0",

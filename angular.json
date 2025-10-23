@@ -13,17 +13,16 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "pt-BR",
-        "locales": {
-          "en": {
-            "translation": "src/locale/messages.en.xlf"
-          },
-          "pt-BR": {
-            "subPath": "pt-BR"
-          }
-        }
-      },
+"i18n": {
+  "sourceLocale": "pt-BR",
+  "locales": {
+    "en": {
+      "translation": "src/locale/messages.en.xlf",
+      "subPath": "en"
+    }
+  }
+},
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -51,7 +50,7 @@
           },
           "configurations": {
             "production": {
-              "localize": [
+              "localize": [ 
                 "en"
               ],
               "budgets": [
@@ -67,13 +66,15 @@
                 }
               ],
               "outputHashing": "all",
-              "assets": [
-                {
-                  "glob": "**/*",
-                  "input": "public",
-                  "output": "/"
-                }
-              ]
+"assets": [
+  "src/favicon.ico",
+  "src/assets",
+  {
+    "glob": "**/*",
+    "input": "public",
+    "output": "/"
+  }
+]
             },
             "development": {
               "optimization": false,
@@ -85,9 +86,7 @@
               ]
             },
             "en": {
-              "localize": [
-                "en"
-              ]
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -102,7 +101,7 @@
               "buildTarget": "regex-generator-app:build:development"
             },
             "en": {
-              "buildTarget": "regex-generator-app:build:development,en"
+                "buildTarget": "regex-generator-app:build:development,en"
             }
           },
           "defaultConfiguration": "development"

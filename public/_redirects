@@ -1,10 +1,3 @@
-/   /pt-BR/  302
-
-/favicon.ico                /pt-BR/favicon.ico    200
-/apple-touch-icon.png       /pt-BR/apple-touch-icon.png 200
-/site.webmanifest           /pt-BR/site.webmanifest 200
-/og.png                     /pt-BR/og.png 200
-/twitter.png                /pt-BR/twitter.png 200
-
-/pt-BR/* /pt-BR/index.html   200
-/en/* /en/index.html      200
+/ /pt-BR 302
+/favicon.ico /pt-BR/favicon.ico 200
+/:locale/* /:locale/index.html 200
