@@ -14,52 +14,66 @@ const app = express();
 const angularApp = new AngularNodeAppEngine();
 const browserDistFolder = join(__dirname, '../browser');
 
-/**
- * Serve arquivos estáticos com qualquer extensão
- * usando regex para evitar erro do path-to-regexp.
- */
-app.get(/^\/.*\..*$/, (req, res, next) => {
-  // Primeiro tenta servir do root
-  const fullPath = path.join(browserDistFolder, req.path);
-  if (fs.existsSync(fullPath)) {
-    return res.sendFile(fullPath);
-  }
+// Lista de idiomas suportados
+const locales = ['pt-BR', 'en'];
 
-  // Tenta servir dentro das pastas de idioma
-  const locales = ['pt-BR', 'en']; // Adicione outros idiomas se houver
+// =======================
+// 1️⃣ Servir arquivos estáticos (qualquer extensão)
+app.get(/^\/.*\..*$/, (req, res, next) => {
+  // Tenta servir do root
+  let fullPath = path.join(browserDistFolder, req.path);
+  if (fs.existsSync(fullPath)) return res.sendFile(fullPath);
+
+  // Tenta dentro de cada idioma
   for (const locale of locales) {
-    const localePath = path.join(browserDistFolder, locale, req.path);
-    if (fs.existsSync(localePath)) {
-      return res.sendFile(localePath);
-    }
+    fullPath = path.join(browserDistFolder, locale, req.path);
+    if (fs.existsSync(fullPath)) return res.sendFile(fullPath);
   }
 
   next();
 });
 
-/**
- * Rota principal do Angular Universal
- */
+// =======================
+// 2️⃣ Redirecionar / dinamicamente baseado no Accept-Language
+app.get('/', (req, res) => {
+  const acceptLang = req.headers['accept-language'] || '';
+  let target = 'pt-BR'; // idioma padrão
+
+  if (acceptLang.includes('en')) {
+    target = 'en';
+  }
+
+  res.redirect(`/${target}/`);
+});
+
+// =======================
+// 3️⃣ Angular Universal SSR handler
 app.use((req, res, next) => {
   angularApp
     .handle(req)
-    .then((response) =>
+    .then(response =>
       response ? writeResponseToNodeResponse(response, res) : next(),
     )
     .catch(next);
 });
 
-/**
- * Start do servidor
- */
+// =======================
+// 4️⃣ Fallback para SPA: qualquer rota desconhecida → pt-BR/index.html
+app.use((req, res) => {
+  const filePath = path.join(browserDistFolder, 'pt-BR', 'index.html');
+  res.sendFile(filePath);
+});
+
+// =======================
+// 5️⃣ Start do servidor
 if (isMainModule(import.meta.url)) {
   const port = process.env['PORT'] || 4000;
   app.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
+    console.log(`Serving locales: ${locales.join(', ')}`);
   });
 }
 
-/**
- * Request handler usado pelo Angular CLI ou Cloud Functions
- */
+// =======================
+// 6️⃣ Request handler para Angular CLI / Cloud Functions
 export const reqHandler = createNodeRequestHandler(app);
